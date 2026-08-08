@@ -8,7 +8,6 @@ takeaway: 代理 IP = 中转地址 + 这些特征；选型时先明确用途，�
 author: EasyBR 团队
 reviewer: EasyBR 团队
 updatedAt: 2026-08-08
-lastVerified: 2026-08-08
 ---
 
 > 这是一篇示例草稿文章，用于验证内容模板与 Schema。正式内容由内容生产环节撰写。

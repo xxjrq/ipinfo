@@ -1,8 +1,9 @@
 /**
- * generate-provider-pages.mjs — 由 providers.json 批量生成供应商文章占位
+ * generate-provider-pages.mjs — 由 providers.json 批量生成供应商文章草稿
  *
- * 为 src/data/providers.json 中每个尚无文章的供应商创建 providers/<slug>.md 占位，
- * frontmatter 用虚构数据预填、正文标注待核实。已存在的文章不会覆盖。
+ * 为 src/data/providers.json 中每个尚无文章的供应商创建 providers/<slug>.md 草稿，
+ * frontmatter 使用新 Schema（status: draft）、正文生成 13 节评测骨架。
+ * 已存在的文章不会覆盖。
  *
  * 用法：npm run gen:providers        # 所有供应商
  *       npm run gen:providers -- netnut bright-data   # 指定 slug
@@ -23,36 +24,98 @@ let created = 0;
 let skipped = 0;
 
 for (const p of targets) {
-	const file = join(OUT_DIR, `${p.slug}.md`);
+	const file = join(OUT_DIR, `_${p.slug}.md`);
 	if (existsSync(file)) {
 		skipped++;
 		continue;
 	}
 	const types = (p.proxyTypes || []).map((t) => `  - ${t}`).join('\n');
+	const protocols = (p.protocols || []).map((t) => `  - ${t}`).join('\n');
 	const auth = (p.authentication || []).map((a) => `  - ${a}`).join('\n');
+	const pricing = (p.pricingModels || []).map((t) => `  - ${t}`).join('\n');
+	const sources = (p.sourceUrls || [])
+		.map((s) => `  - title: ${s.title}\n    url: ${s.url}`)
+		.join('\n');
 	const content = `---
-title: ${p.name} 代理导入 EasyBR 教程
-description: 在 EasyBR 中添加 ${p.name} 代理的完整步骤：注册购买、获取 host:port 参数、配置 HTTP/SOCKS5、批量导入与常见错误排查（待核实补写）。
+title: ${p.name} 代理怎么样？产品类型、适用场景与使用参考
+description: ${p.name} 代理服务商整理：支持 ${types.split('\n').join(', ')}，协议与认证方式、适用场景、优点与限制。资料核验中，以官方页面为准。
 pageType: providers
 provider: ${p.name}
-providerUrl: ${p.url || '待核实'}
-supportedProxyTypes:
+slug: ${p.slug}
+status: draft
+officialUrl: ${p.officialUrl || '待核实'}
+proxyTypes:
 ${types}
+protocols:
+${protocols}
 authentication:
 ${auth}
+pricingModels:
+${pricing}
 regions: 待核实
-supportsApi: ${p.supportsApi ?? false}
-supportsWhitelist: ${p.supportsWhitelist ?? false}
-officialDocs: 待核实
-verified: false
-summary: ${p.name} 代理导入 EasyBR 的使用说明（待撰写）。
-takeaway: 待撰写
+sources:
+${sources || '  - title: ${p.name} 官网\n    url: ${p.officialUrl || "待核实"}'}
+summary: ${p.name} 提供 ${types.split('\n').join('/')} 代理，主要适合${(p.targetUsers || []).join('、') || '待核实的用户群体'}，本文整理其产品类型、适用场景与注意事项（资料核验中）。
+takeaway: ${p.name} 的适用结论待核实后补充。
 author: EasyBR 团队
 updatedAt: 2026-08-08
-disclosure: 本篇为教程占位，参数为虚构示例；实际套餐与接口以服务商官方页面为准，资料核实后请填写 lastVerified。
+disclosure: 本文基于服务商官方公开资料整理，具体能力以官方页面为准；资料核实完成后将 status 改为 published 并补充 updatedAt 对应信息。
 ---
 
-> 教程待撰写。核实 ${p.name} 官方资料后，参考 [NetNut 教程](../netnut/) 的 13 段结构完成本文，并设置 \`lastVerified\` 与 \`verified: true\`。
+> 资料核验中（status: draft）。核实 ${p.name} 官方资料后，按下方 13 节结构补全正文，
+> 并在 \`src/data/providers.json\` 中将其 status 改为 published、补充 sourceUrls 与核验信息后发布。
+
+## 一句话结论
+
+（待核实后填写）
+
+## 基本信息
+
+- 官网：${p.officialUrl || '待核实'}
+
+## 提供哪些代理产品
+
+${types}
+
+## 适合哪些用户
+
+（待核实后填写）
+
+## 主要优点
+
+（待核实后填写）
+
+## 需要注意的限制
+
+（待核实后填写）
+
+## 覆盖国家与定位粒度
+
+（待核实后填写）
+
+## 认证和连接方式
+
+${auth}
+
+## 价格与试用说明
+
+（仅官方公布信息，无证据不写）
+
+## 官方入口与文档
+
+${p.officialUrl || '待核实'}
+
+## 同类服务商
+
+（待核实后填写，仅链已发布页）
+
+## 信息来源与核验日期
+
+（待核实后补充 sources 与核验日期）
+
+## 使用代理的配套工具
+
+（EasyBR 一行简介 + 入口）
 `;
 	writeFileSync(file, content);
 	created++;

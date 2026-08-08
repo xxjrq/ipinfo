@@ -1,0 +1,111 @@
+name: 新增服务商
+description: 提交一个尚未收录的代理 IP 服务商资料
+title: "[新增服务商] 服务商名称"
+labels: [new-provider]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢提交服务商资料。请尽量完整填写以下信息，来源链接（官方页面）必填，便于维护者核验。信息以官方页面为准，请勿提交未经确认的推广信息。
+  - type: input
+    id: name
+    attributes:
+      label: 服务商名称
+      description: 官方品牌名称（如 NetNut、青果、922 S5）
+      placeholder: 例如：NetNut
+    validations:
+      required: true
+  - type: input
+    id: slug
+    attributes:
+      label: 英文标识（slug）
+      description: 全小写连字符格式，用于 URL 与数据标识
+      placeholder: 例如：netnut
+    validations:
+      required: true
+  - type: input
+    id: officialUrl
+    attributes:
+      label: 官方网址
+      description: 服务商官网首页
+      placeholder: https://www.example.com/
+    validations:
+      required: true
+  - type: checkboxes
+    id: proxyTypes
+    attributes:
+      label: 代理类型（可多选）
+      description: 该服务商支持的代理类型
+      options:
+        - label: 住宅代理（residential）
+        - label: 静态住宅（static_residential）
+        - label: 数据中心代理（datacenter）
+        - label: 移动代理（mobile）
+        - label: IP 池（ip_pool）
+        - label: 不确定 / 其他（请在备注说明）
+    validations:
+      required: true
+  - type: checkboxes
+    id: protocols
+    attributes:
+      label: 支持的协议（可多选）
+      description: 该服务商支持的接入协议
+      options:
+        - label: HTTP
+        - label: HTTPS
+        - label: SOCKS5
+        - label: 不确定（请在备注说明）
+    validations:
+      required: true
+  - type: checkboxes
+    id: authentication
+    attributes:
+      label: 认证方式（可多选）
+      description: 账号密码、IP 白名单、API Token 等
+      options:
+        - label: 账号密码（username/password）
+        - label: IP 白名单（whitelist_ip）
+        - label: API Token
+        - label: 不确定（请在备注说明）
+    validations:
+      required: true
+  - type: checkboxes
+    id: pricingModel
+    attributes:
+      label: 计费模式（可多选）
+      description: 按流量、按带宽、按 IP 数等
+      options:
+        - label: 按流量（traffic）
+        - label: 按带宽（bandwidth）
+        - label: 按 IP 数量（ip_count）
+        - label: 按并发数（concurrent）
+        - label: 按需付费（pay_as_you_go）
+        - label: 不确定（请在备注说明）
+    validations:
+      required: true
+  - type: input
+    id: regions
+    attributes:
+      label: 覆盖区域
+      description: 主要覆盖国家/地区，逗号分隔
+      placeholder: 美国, 欧洲, 亚洲
+    validations:
+      required: true
+  - type: textarea
+    id: sourceUrls
+    attributes:
+      label: 信息来源（必填）
+      description: 官方页面链接，至少 1 条（如官网、定价页、功能页）。多条请每行一条。
+      placeholder: |
+        https://www.example.com/pricing
+        https://www.example.com/features
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: 备注（可选）
+      description: 试用信息、注意事项、限制条件、相关教程链接等
+      placeholder: 例如：有免费试用额度；最低起充金额……
+    validations:
+      required: false

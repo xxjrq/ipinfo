@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "EasyBR IP 资源中心 — 代理 IP 选型、配置、检测与指纹浏览器使用指南",
+  "description": "中立代理 IP 资源导航与选型平台（开源资源库）— 服务商评测、选型知识、避坑指南与 EasyBR 配置说明",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -14,10 +14,12 @@
     "validate": "node scripts/validate-content.mjs",
     "validate:dev": "ALLOW_DRAFTS=true node scripts/validate-content.mjs",
     "check-drafts": "node scripts/check-drafts.mjs",
+    "export-data": "node scripts/export-provider-data.mjs",
     "check-dist": "node scripts/check-dist.mjs",
     "links": "node scripts/check-links.mjs",
+    "test:sponsor-off": "node scripts/check-sponsor-off.mjs",
     "gen:providers": "node scripts/generate-provider-pages.mjs",
-    "ci": "npm run validate && npm run check-drafts && npm run check && npm run build && npm run check-dist && npm run links"
+    "ci": "npm run validate && npm run check-drafts && npm run export-data && npm run check && npm run build && npm run check-dist && npm run links && npm run test:sponsor-off"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",

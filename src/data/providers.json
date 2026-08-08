@@ -1,27 +1,1228 @@
 {
   "updatedAt": "2026-08-08",
-  "note": "status=pending 表示资料尚未人工核实。供应商价格、国家覆盖、API 地址等易变信息必须核实后填充 lastVerified，再由内容生产环节发布。",
+  "note": "服务商状态机：draft=内部草稿不构建（默认）；published=完成核验正式发布；outdated=信息过期显示更新提示；inactive=停止运营移入历史。公开数据（public/data/*）仅导出 published。未知/待确认项留空数组或空字符串，并在 notes 注明待核验。",
   "providers": [
-    { "slug": "bright-data", "name": "Bright Data", "url": "https://brightdata.com", "proxyTypes": ["residential", "static-residential", "datacenter", "mobile", "isp"], "authentication": ["username-password", "ip-whitelist", "api"], "regions": "", "supportsApi": true, "supportsWhitelist": true, "lastVerified": null, "status": "pending" },
-    { "slug": "netnut", "name": "NetNut", "url": "https://netnut.io", "proxyTypes": ["residential", "static-residential", "datacenter"], "authentication": ["username-password", "api"], "regions": "", "supportsApi": true, "supportsWhitelist": true, "lastVerified": null, "status": "pending" },
-    { "slug": "soax", "name": "SOAX", "url": "https://soax.com", "proxyTypes": ["residential", "mobile", "datacenter", "isp"], "authentication": ["username-password", "api"], "regions": "", "supportsApi": true, "supportsWhitelist": true, "lastVerified": null, "status": "pending" },
-    { "slug": "oxylabs", "name": "Oxylabs", "url": "https://oxylabs.io", "proxyTypes": ["residential", "static-residential", "datacenter", "mobile", "isp"], "authentication": ["username-password", "ip-whitelist", "api"], "regions": "", "supportsApi": true, "supportsWhitelist": true, "lastVerified": null, "status": "pending" },
-    { "slug": "ipidea", "name": "IPIDEA", "url": "https://www.ipidea.net", "proxyTypes": ["residential", "static-residential", "datacenter"], "authentication": ["username-password"], "regions": "", "supportsApi": true, "supportsWhitelist": true, "lastVerified": null, "status": "pending" },
-    { "slug": "ipfoxy", "name": "IPFoxy", "url": "https://www.ipfoxy.net", "proxyTypes": ["residential", "static-residential", "datacenter"], "authentication": ["username-password"], "regions": "", "supportsApi": true, "supportsWhitelist": true, "lastVerified": null, "status": "pending" },
-    { "slug": "proxy302", "name": "Proxy302", "url": "https://www.proxy302.com", "proxyTypes": ["residential", "static-residential", "datacenter"], "authentication": ["username-password"], "regions": "", "supportsApi": true, "supportsWhitelist": true, "lastVerified": null, "status": "pending" },
-    { "slug": "smartproxy", "name": "Smartproxy / Decodo", "url": "https://smartproxy.com", "proxyTypes": ["residential", "datacenter", "mobile", "isp"], "authentication": ["username-password", "ip-whitelist", "api"], "regions": "", "supportsApi": true, "supportsWhitelist": true, "lastVerified": null, "status": "pending" },
-    { "slug": "iproyal", "name": "IPRoyal", "url": "https://iproyal.com", "proxyTypes": ["residential", "datacenter", "mobile"], "authentication": ["username-password", "ip-whitelist", "api"], "regions": "", "supportsApi": true, "supportsWhitelist": true, "lastVerified": null, "status": "pending" },
-    { "slug": "webshare", "name": "Webshare", "url": "https://www.webshare.io", "proxyTypes": ["residential", "datacenter"], "authentication": ["username-password", "ip-whitelist", "api"], "regions": "", "supportsApi": true, "supportsWhitelist": true, "lastVerified": null, "status": "pending" },
-    { "slug": "nodemaven", "name": "NodeMaven", "url": "https://nodemaven.com", "proxyTypes": ["mobile", "residential"], "authentication": ["username-password"], "regions": "", "supportsApi": true, "supportsWhitelist": true, "lastVerified": null, "status": "pending" },
-    { "slug": "packetstream", "name": "PacketStream", "url": "https://packetstream.io", "proxyTypes": ["residential"], "authentication": ["username-password"], "regions": "", "supportsApi": true, "supportsWhitelist": true, "lastVerified": null, "status": "pending" },
-    { "slug": "rayobyte", "name": "Rayobyte", "url": "https://www.rayobyte.com", "proxyTypes": ["datacenter", "residential", "mobile", "isp"], "authentication": ["username-password", "ip-whitelist", "api"], "regions": "", "supportsApi": true, "supportsWhitelist": true, "lastVerified": null, "status": "pending" },
-    { "slug": "922-s5", "name": "922 S5 Proxy", "url": "https://www.922proxy.com", "proxyTypes": ["residential", "static-residential"], "authentication": ["username-password", "ip-whitelist"], "regions": "", "supportsApi": true, "supportsWhitelist": true, "lastVerified": null, "status": "pending" },
-    { "slug": "qingguo", "name": "青果网络", "url": "", "proxyTypes": ["residential", "datacenter"], "authentication": ["username-password"], "regions": "", "supportsApi": true, "supportsWhitelist": true, "lastVerified": null, "status": "pending" },
-    { "slug": "zhima", "name": "芝麻代理", "url": "", "proxyTypes": ["residential", "datacenter"], "authentication": ["username-password"], "regions": "", "supportsApi": true, "supportsWhitelist": true, "lastVerified": null, "status": "pending" },
-    { "slug": "juliang-ip", "name": "巨量 IP", "url": "", "proxyTypes": ["residential", "datacenter"], "authentication": ["username-password"], "regions": "", "supportsApi": true, "supportsWhitelist": true, "lastVerified": null, "status": "pending" },
-    { "slug": "pinzan", "name": "品赞", "url": "", "proxyTypes": ["residential", "datacenter"], "authentication": ["username-password"], "regions": "", "supportsApi": true, "supportsWhitelist": true, "lastVerified": null, "status": "pending" },
-    { "slug": "xiequ", "name": "携趣", "url": "", "proxyTypes": ["residential", "datacenter"], "authentication": ["username-password"], "regions": "", "supportsApi": true, "supportsWhitelist": true, "lastVerified": null, "status": "pending" },
-    { "slug": "taiyang-http", "name": "太阳 HTTP", "url": "", "proxyTypes": ["datacenter"], "authentication": ["username-password"], "regions": "", "supportsApi": false, "supportsWhitelist": false, "lastVerified": null, "status": "pending" },
-    { "slug": "tianqi-http", "name": "天启 HTTP", "url": "", "proxyTypes": ["datacenter"], "authentication": ["username-password"], "regions": "", "supportsApi": false, "supportsWhitelist": false, "lastVerified": null, "status": "pending" }
+    {
+      "name": "Bright Data",
+      "slug": "bright-data",
+      "status": "draft",
+      "officialUrl": "https://brightdata.com",
+      "description": "Bright Data 代理服务商，提供 residential/static-residential/datacenter/mobile/isp代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "proxyTypes": [
+        "residential",
+        "static-residential",
+        "datacenter",
+        "mobile",
+        "isp"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "ip-whitelist",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "ip",
+        "package"
+      ],
+      "regions": [],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "state",
+        "city",
+        "asn"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "enterprise",
+        "sme"
+      ],
+      "selfService": true,
+      "trialAvailable": true,
+      "language": [
+        "en"
+      ],
+      "regionServed": [
+        "global"
+      ],
+      "sourceUrls": [
+        {
+          "title": "Bright Data 官网",
+          "url": "https://brightdata.com"
+        },
+        {
+          "title": "Bright Data 官方文档",
+          "url": "https://docs.brightdata.com"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "待核验"
+    },
+    {
+      "name": "NetNut",
+      "slug": "netnut",
+      "status": "draft",
+      "officialUrl": "https://netnut.io",
+      "description": "NetNut 代理服务商，提供 residential/static-residential/datacenter代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "proxyTypes": [
+        "residential",
+        "static-residential",
+        "datacenter"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "api",
+        "ip-whitelist"
+      ],
+      "pricingModels": [
+        "traffic",
+        "ip",
+        "package"
+      ],
+      "regions": [],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city",
+        "asn"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "enterprise",
+        "sme"
+      ],
+      "selfService": true,
+      "trialAvailable": true,
+      "language": [
+        "en"
+      ],
+      "regionServed": [
+        "global"
+      ],
+      "sourceUrls": [
+        {
+          "title": "NetNut 官网",
+          "url": "https://netnut.io"
+        },
+        {
+          "title": "NetNut 官方文档",
+          "url": "https://docs.netnut.io"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "待核验"
+    },
+    {
+      "name": "SOAX",
+      "slug": "soax",
+      "status": "draft",
+      "officialUrl": "https://soax.com",
+      "description": "SOAX 代理服务商，提供 residential/mobile/datacenter/isp代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "proxyTypes": [
+        "residential",
+        "mobile",
+        "datacenter",
+        "isp"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "api",
+        "ip-whitelist"
+      ],
+      "pricingModels": [
+        "traffic",
+        "package"
+      ],
+      "regions": [],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city",
+        "asn"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "enterprise",
+        "sme"
+      ],
+      "selfService": true,
+      "trialAvailable": true,
+      "language": [
+        "en"
+      ],
+      "regionServed": [
+        "global"
+      ],
+      "sourceUrls": [
+        {
+          "title": "SOAX 官网",
+          "url": "https://soax.com"
+        },
+        {
+          "title": "SOAX 官方文档",
+          "url": "https://docs.soax.com"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "待核验"
+    },
+    {
+      "name": "Oxylabs",
+      "slug": "oxylabs",
+      "status": "draft",
+      "officialUrl": "https://oxylabs.io",
+      "description": "Oxylabs 代理服务商，提供 residential/static-residential/datacenter/mobile/isp代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "proxyTypes": [
+        "residential",
+        "static-residential",
+        "datacenter",
+        "mobile",
+        "isp"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "ip-whitelist",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "ip",
+        "package"
+      ],
+      "regions": [],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "state",
+        "city",
+        "asn"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "enterprise",
+        "sme"
+      ],
+      "selfService": true,
+      "trialAvailable": true,
+      "language": [
+        "en"
+      ],
+      "regionServed": [
+        "global"
+      ],
+      "sourceUrls": [
+        {
+          "title": "Oxylabs 官网",
+          "url": "https://oxylabs.io"
+        },
+        {
+          "title": "Oxylabs 开发者文档",
+          "url": "https://developers.oxylabs.io"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "待核验"
+    },
+    {
+      "name": "IPIDEA",
+      "slug": "ipidea",
+      "status": "draft",
+      "officialUrl": "https://www.ipidea.net",
+      "description": "IPIDEA 代理服务商，提供 residential/static-residential/datacenter代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "proxyTypes": [
+        "residential",
+        "static-residential",
+        "datacenter"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "api",
+        "ip-whitelist"
+      ],
+      "pricingModels": [
+        "traffic",
+        "ip",
+        "package"
+      ],
+      "regions": [],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "enterprise",
+        "sme"
+      ],
+      "selfService": true,
+      "trialAvailable": true,
+      "language": [
+        "zh",
+        "en"
+      ],
+      "regionServed": [
+        "global",
+        "asia"
+      ],
+      "sourceUrls": [
+        {
+          "title": "IPIDEA 官网",
+          "url": "https://www.ipidea.net"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "待核验：官方文档与价格页 URL 待补充"
+    },
+    {
+      "name": "IPFoxy",
+      "slug": "ipfoxy",
+      "status": "draft",
+      "officialUrl": "https://www.ipfoxy.net",
+      "description": "IPFoxy 代理服务商，提供 residential/static-residential/datacenter代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "proxyTypes": [
+        "residential",
+        "static-residential",
+        "datacenter"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "api",
+        "ip-whitelist"
+      ],
+      "pricingModels": [
+        "traffic",
+        "ip",
+        "package"
+      ],
+      "regions": [],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "enterprise",
+        "sme"
+      ],
+      "selfService": true,
+      "trialAvailable": true,
+      "language": [
+        "zh",
+        "en"
+      ],
+      "regionServed": [
+        "global",
+        "asia"
+      ],
+      "sourceUrls": [
+        {
+          "title": "IPFoxy 官网",
+          "url": "https://www.ipfoxy.net"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "待核验：官方文档与价格页 URL 待补充"
+    },
+    {
+      "name": "Proxy302",
+      "slug": "proxy302",
+      "status": "draft",
+      "officialUrl": "https://www.proxy302.com",
+      "description": "Proxy302 代理服务商，提供 residential/static-residential/datacenter代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "proxyTypes": [
+        "residential",
+        "static-residential",
+        "datacenter"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "api",
+        "ip-whitelist"
+      ],
+      "pricingModels": [
+        "traffic",
+        "ip",
+        "package"
+      ],
+      "regions": [],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": true,
+      "language": [
+        "zh",
+        "en"
+      ],
+      "regionServed": [
+        "global",
+        "asia"
+      ],
+      "sourceUrls": [
+        {
+          "title": "Proxy302 官网",
+          "url": "https://www.proxy302.com"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "待核验：官方文档与价格页 URL 待补充"
+    },
+    {
+      "name": "Smartproxy / Decodo",
+      "slug": "smartproxy",
+      "status": "draft",
+      "officialUrl": "https://smartproxy.com",
+      "description": "Smartproxy / Decodo 代理服务商，提供 residential/datacenter/mobile/isp代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "proxyTypes": [
+        "residential",
+        "datacenter",
+        "mobile",
+        "isp"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "ip-whitelist",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "ip",
+        "package"
+      ],
+      "regions": [],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city",
+        "asn"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "enterprise"
+      ],
+      "selfService": true,
+      "trialAvailable": true,
+      "language": [
+        "en"
+      ],
+      "regionServed": [
+        "global"
+      ],
+      "sourceUrls": [
+        {
+          "title": "Smartproxy 官网",
+          "url": "https://smartproxy.com"
+        },
+        {
+          "title": "Smartproxy 官方文档",
+          "url": "https://docs.smartproxy.com"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "待核验"
+    },
+    {
+      "name": "IPRoyal",
+      "slug": "iproyal",
+      "status": "draft",
+      "officialUrl": "https://iproyal.com",
+      "description": "IPRoyal 代理服务商，提供 residential/datacenter/mobile代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "proxyTypes": [
+        "residential",
+        "datacenter",
+        "mobile"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "ip-whitelist",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "ip",
+        "package"
+      ],
+      "regions": [],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": true,
+      "language": [
+        "en"
+      ],
+      "regionServed": [
+        "global"
+      ],
+      "sourceUrls": [
+        {
+          "title": "IPRoyal 官网",
+          "url": "https://iproyal.com"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "待核验：官方文档 URL 待补充"
+    },
+    {
+      "name": "Webshare",
+      "slug": "webshare",
+      "status": "draft",
+      "officialUrl": "https://www.webshare.io",
+      "description": "Webshare 代理服务商，提供 residential/datacenter代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "proxyTypes": [
+        "residential",
+        "datacenter"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "ip-whitelist",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "ip",
+        "package"
+      ],
+      "regions": [],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": true,
+      "language": [
+        "en"
+      ],
+      "regionServed": [
+        "global"
+      ],
+      "sourceUrls": [
+        {
+          "title": "Webshare 官网",
+          "url": "https://www.webshare.io"
+        },
+        {
+          "title": "Webshare 官方文档",
+          "url": "https://docs.webshare.io"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "待核验"
+    },
+    {
+      "name": "NodeMaven",
+      "slug": "nodemaven",
+      "status": "draft",
+      "officialUrl": "https://nodemaven.com",
+      "description": "NodeMaven 代理服务商，提供 mobile/residential代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "proxyTypes": [
+        "mobile",
+        "residential"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "api",
+        "ip-whitelist"
+      ],
+      "pricingModels": [
+        "traffic",
+        "package"
+      ],
+      "regions": [],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city",
+        "state",
+        "asn"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "enterprise",
+        "sme"
+      ],
+      "selfService": true,
+      "trialAvailable": true,
+      "language": [
+        "en"
+      ],
+      "regionServed": [
+        "global"
+      ],
+      "sourceUrls": [
+        {
+          "title": "NodeMaven 官网",
+          "url": "https://nodemaven.com"
+        },
+        {
+          "title": "NodeMaven 官方文档",
+          "url": "https://nodemaven.com/docs"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "待核验：价格页 URL 待补充"
+    },
+    {
+      "name": "PacketStream",
+      "slug": "packetstream",
+      "status": "draft",
+      "officialUrl": "https://packetstream.io",
+      "description": "PacketStream 代理服务商，提供 residential代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "proxyTypes": [
+        "residential"
+      ],
+      "protocols": [
+        "http",
+        "https"
+      ],
+      "authentication": [
+        "username-password",
+        "ip-whitelist",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "package"
+      ],
+      "regions": [],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country"
+      ],
+      "sessionMode": [
+        "rotating"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": true,
+      "language": [
+        "en"
+      ],
+      "regionServed": [
+        "global"
+      ],
+      "sourceUrls": [
+        {
+          "title": "PacketStream 官网",
+          "url": "https://packetstream.io"
+        },
+        {
+          "title": "PacketStream 官方文档",
+          "url": "https://packetstream.io/docs"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "待核验"
+    },
+    {
+      "name": "Rayobyte",
+      "slug": "rayobyte",
+      "status": "draft",
+      "officialUrl": "https://www.rayobyte.com",
+      "description": "Rayobyte 代理服务商，提供 datacenter/residential/mobile/isp代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "proxyTypes": [
+        "datacenter",
+        "residential",
+        "mobile",
+        "isp"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "ip-whitelist",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "ip",
+        "package"
+      ],
+      "regions": [],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city",
+        "state"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "enterprise",
+        "sme"
+      ],
+      "selfService": true,
+      "trialAvailable": true,
+      "language": [
+        "en"
+      ],
+      "regionServed": [
+        "global"
+      ],
+      "sourceUrls": [
+        {
+          "title": "Rayobyte 官网",
+          "url": "https://www.rayobyte.com"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "待核验：官方文档 URL 待补充"
+    },
+    {
+      "name": "922 S5 Proxy",
+      "slug": "922-s5",
+      "status": "draft",
+      "officialUrl": "https://www.922proxy.com",
+      "description": "922 S5 Proxy 代理服务商，提供 residential/static-residential代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "proxyTypes": [
+        "residential",
+        "static-residential"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "ip-whitelist",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "package"
+      ],
+      "regions": [],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": true,
+      "language": [
+        "zh",
+        "en"
+      ],
+      "regionServed": [
+        "global",
+        "asia"
+      ],
+      "sourceUrls": [
+        {
+          "title": "922 S5 Proxy 官网",
+          "url": "https://www.922proxy.com"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "待核验：官方文档、价格页与试用入口 URL 待补充"
+    },
+    {
+      "name": "青果网络",
+      "slug": "qingguo",
+      "status": "draft",
+      "officialUrl": "",
+      "description": "青果网络 代理服务商，提供 residential/datacenter代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "proxyTypes": [
+        "residential",
+        "datacenter"
+      ],
+      "protocols": [
+        "http",
+        "https"
+      ],
+      "authentication": [
+        "username-password",
+        "api",
+        "ip-whitelist"
+      ],
+      "pricingModels": [
+        "traffic",
+        "package"
+      ],
+      "regions": [],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "enterprise"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "cn"
+      ],
+      "sourceUrls": [],
+      "updatedAt": "2026-08-08",
+      "notes": "待核验：官网、协议支持与试用信息待人工核实"
+    },
+    {
+      "name": "芝麻代理",
+      "slug": "zhima",
+      "status": "draft",
+      "officialUrl": "",
+      "description": "芝麻代理 代理服务商，提供 residential/datacenter代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "proxyTypes": [
+        "residential",
+        "datacenter"
+      ],
+      "protocols": [
+        "http",
+        "https"
+      ],
+      "authentication": [
+        "username-password",
+        "api",
+        "ip-whitelist"
+      ],
+      "pricingModels": [
+        "traffic",
+        "package"
+      ],
+      "regions": [],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "enterprise"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "cn"
+      ],
+      "sourceUrls": [],
+      "updatedAt": "2026-08-08",
+      "notes": "待核验：官网、协议支持与试用信息待人工核实"
+    },
+    {
+      "name": "巨量 IP",
+      "slug": "juliang-ip",
+      "status": "draft",
+      "officialUrl": "",
+      "description": "巨量 IP 代理服务商，提供 residential/datacenter代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "proxyTypes": [
+        "residential",
+        "datacenter"
+      ],
+      "protocols": [
+        "http",
+        "https"
+      ],
+      "authentication": [
+        "username-password",
+        "api",
+        "ip-whitelist"
+      ],
+      "pricingModels": [
+        "traffic",
+        "package"
+      ],
+      "regions": [],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "cn"
+      ],
+      "sourceUrls": [],
+      "updatedAt": "2026-08-08",
+      "notes": "待核验：官网、协议支持与试用信息待人工核实"
+    },
+    {
+      "name": "品赞",
+      "slug": "pinzan",
+      "status": "draft",
+      "officialUrl": "",
+      "description": "品赞 代理服务商，提供 residential/datacenter代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "proxyTypes": [
+        "residential",
+        "datacenter"
+      ],
+      "protocols": [
+        "http",
+        "https"
+      ],
+      "authentication": [
+        "username-password",
+        "api",
+        "ip-whitelist"
+      ],
+      "pricingModels": [
+        "traffic",
+        "package"
+      ],
+      "regions": [],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "cn"
+      ],
+      "sourceUrls": [],
+      "updatedAt": "2026-08-08",
+      "notes": "待核验：官网、协议支持与试用信息待人工核实"
+    },
+    {
+      "name": "携趣",
+      "slug": "xiequ",
+      "status": "draft",
+      "officialUrl": "",
+      "description": "携趣 代理服务商，提供 residential/datacenter代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "proxyTypes": [
+        "residential",
+        "datacenter"
+      ],
+      "protocols": [
+        "http",
+        "https"
+      ],
+      "authentication": [
+        "username-password",
+        "api",
+        "ip-whitelist"
+      ],
+      "pricingModels": [
+        "traffic",
+        "package"
+      ],
+      "regions": [],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "cn"
+      ],
+      "sourceUrls": [],
+      "updatedAt": "2026-08-08",
+      "notes": "待核验：官网、协议支持与试用信息待人工核实"
+    },
+    {
+      "name": "太阳 HTTP",
+      "slug": "taiyang-http",
+      "status": "draft",
+      "officialUrl": "",
+      "description": "太阳 HTTP 代理服务商，提供 datacenter代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "proxyTypes": [
+        "datacenter"
+      ],
+      "protocols": [
+        "http",
+        "https"
+      ],
+      "authentication": [
+        "username-password"
+      ],
+      "pricingModels": [
+        "traffic",
+        "package"
+      ],
+      "regions": [],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "cn"
+      ],
+      "sourceUrls": [],
+      "updatedAt": "2026-08-08",
+      "notes": "待核验：官网、协议支持与试用信息待人工核实"
+    },
+    {
+      "name": "天启 HTTP",
+      "slug": "tianqi-http",
+      "status": "draft",
+      "officialUrl": "",
+      "description": "天启 HTTP 代理服务商，提供 datacenter代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "proxyTypes": [
+        "datacenter"
+      ],
+      "protocols": [
+        "http",
+        "https"
+      ],
+      "authentication": [
+        "username-password"
+      ],
+      "pricingModels": [
+        "traffic",
+        "package"
+      ],
+      "regions": [],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "cn"
+      ],
+      "sourceUrls": [],
+      "updatedAt": "2026-08-08",
+      "notes": "待核验：官网、协议支持与试用信息待人工核实"
+    }
   ]
 }

@@ -8,7 +8,6 @@ takeaway: 从基础概念开始，按需选择服务商教程，最后在 EasyBR
 author: EasyBR 团队
 reviewer: EasyBR 团队
 updatedAt: 2026-08-08
-lastVerified: 2026-08-08
 appliesTo: EasyBR 2.x
 ---
 

@@ -8,6 +8,9 @@
  *   4. llms.txt 中所有站点 URL 在 dist 中真实存在
  *   5. sitemap 中所有 URL 在 dist 中真实存在（无死链）
  *   6. 所有 HTML 不含占位短语（内容建设中/教程待撰写）
+ *   7. 品牌残留（花漾/szdamai）零出现
+ *   8. 公开数据文件存在且格式正确（providers.json 带包裹结构 / providers.csv 同范围）
+ *   9. dist 中不存在 draft 服务商页面（草稿被排除出构建）
  *
  * 依赖 SITE_URL / BASE_PATH 环境变量（与构建一致）。
  * 违反任意一条 → 退出码 1。
@@ -20,20 +23,24 @@ const SITE_URL = process.env.SITE_URL || 'https://example.github.io';
 const BASE_PATH = process.env.BASE_PATH || '/';
 const siteBase = SITE_URL + BASE_PATH.replace(/\/$/, '');
 const PLACEHOLDER = /内容建设中|教程待撰写/;
+const FORBIDDEN_BRAND = ['花漾', '花漾指纹', 'szdamai'];
 
 const errors = [];
 
 const KEY_URLS = [
 	'/',
-	'/getting-started/',
 	'/basics/',
 	'/proxy-types/',
+	'/use-cases/',
 	'/providers/',
 	'/easybr/',
 	'/comparisons/',
 	'/troubleshooting/',
 	'/faq/',
 	'/about/editorial-policy/',
+	'/about/how-we-review/',
+	'/about/affiliate-disclosure/',
+	'/about/corrections/',
 ];
 
 function urlToDistPath(url) {
@@ -70,6 +77,9 @@ for (const file of collectHtml(DIST)) {
 	const rel = file.replace(DIST + '/', '');
 
 	if (PLACEHOLDER.test(html)) errors.push(`${rel}: 产物 HTML 含占位短语`);
+
+	const brandHit = FORBIDDEN_BRAND.filter((w) => html.includes(w));
+	if (brandHit.length) errors.push(`${rel}: 产物 HTML 含禁止品牌残留（${brandHit.join('、')}）`);
 
 	const h1s = html.match(/<h1[\s>]/g) || [];
 	if (h1s.length !== 1) errors.push(`${rel}: H1 数量 ${h1s.length}（应为 1）`);
@@ -127,6 +137,46 @@ for (const sf of sitemapFiles) {
 		if (!existsSync(urlToDistPath(pathPart))) errors.push(`sitemap(${sf}) 死链: ${url}`);
 	}
 }
+
+// 6. 公开数据文件存在且格式正确
+const dataJsonPath = join(DIST, 'data/providers.json');
+const dataCsvPath = join(DIST, 'data/providers.csv');
+if (!existsSync(dataJsonPath)) {
+	errors.push('dist 缺少 data/providers.json（公开数据未导出）');
+} else {
+	try {
+		const payload = JSON.parse(readFileSync(dataJsonPath, 'utf8'));
+		if (!payload.generatedAt || !payload.license || !payload.project || !Array.isArray(payload.providers)) {
+			errors.push('data/providers.json 结构不符合规范（缺 generatedAt/license/project/providers）');
+		}
+		for (const p of payload.providers) {
+			if (p.status !== 'published') errors.push(`data/providers.json: 「${p.name}」含非 published 条目（公开数据只允许 published）`);
+			if (!p.slug || !p.officialUrl) errors.push(`data/providers.json: 「${p.name}」缺 slug/officialUrl`);
+		}
+	} catch (e) {
+		errors.push(`data/providers.json 解析失败: ${e.message}`);
+	}
+}
+if (!existsSync(dataCsvPath)) {
+	errors.push('dist 缺少 data/providers.csv（公开数据未导出）');
+} else {
+	const csv = readFileSync(dataCsvPath, 'utf8');
+	const csvRows = csv.trim().split('\n');
+	if (csvRows.length < 1 || !csvRows[0]) errors.push('data/providers.csv 缺少表头');
+	// 允许 0 数据行（当前无 published 服务商时为合法状态），但行数必须与 JSON 一致
+	// CSV 条目与 JSON 一致：JSON providers 数 = CSV 数据行数
+	const jsonCount = existsSync(dataJsonPath) ? (JSON.parse(readFileSync(dataJsonPath, 'utf8')).providers || []).length : -1;
+	if (jsonCount >= 0 && csvRows.length - 1 !== jsonCount) {
+		errors.push(`data/providers.csv 条目数（${csvRows.length - 1}）与 providers.json（${jsonCount}）不一致`);
+	}
+}
+
+// 7. dist 中不存在 draft 服务商页面（草稿排除出构建；_ 前缀文件不产生产物，此处防御检查）
+const draftSlugHits = [];
+for (const p of readdirSync(join(DIST, 'providers'), { withFileTypes: true })) {
+	if (p.isDirectory() && p.name.startsWith('_')) draftSlugHits.push(p.name);
+}
+if (draftSlugHits.length) errors.push(`dist/providers 含草稿目录（${draftSlugHits.join(', ')}）`);
 
 for (const e of errors) console.error(`   ✗ ${e}`);
 console.log(`\n结果：${errors.length} 错误`);

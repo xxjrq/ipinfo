@@ -1,0 +1,43 @@
+name: 信息纠错
+description: 报告站点上存在错误或过时的服务商信息
+title: "[纠错] 页面标题"
+labels: [correction]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢指出错误。请提供错误位置的页面链接、错误内容与正确信息，并附上证据来源（官方页面链接优先），便于维护者核验后修正。
+  - type: input
+    id: pageUrl
+    attributes:
+      label: 页面 URL
+      description: 存在错误信息的页面地址
+      placeholder: https://xxjrq.github.io/ipinfo/providers/netnut/
+    validations:
+      required: true
+  - type: textarea
+    id: wrongContent
+    attributes:
+      label: 错误内容
+      description: 页面上错误或过时的信息原文（可引用片段）
+      placeholder: 例如：页面写「按 IP 数计费」，实际是按流量计费……
+    validations:
+      required: true
+  - type: textarea
+    id: correctContent
+    attributes:
+      label: 正确信息
+      description: 你认为正确的信息内容
+      placeholder: 例如：该服务商实际按流量计费，最低起充 50 美元……
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 证据来源（必填）
+      description: 官方页面或权威来源链接，至少 1 条。多条请每行一条。
+      placeholder: |
+        https://www.example.com/pricing
+        https://www.example.com/faq
+    validations:
+      required: true

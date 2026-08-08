@@ -8,7 +8,6 @@ takeaway: 添加 HTTP/HTTPS 代理一共五步：新建环境 → 代理设置 �
 author: EasyBR 团队
 reviewer: EasyBR 团队
 updatedAt: 2026-08-08
-lastVerified: 2026-08-08
 appliesTo: EasyBR 2.x（Windows / macOS）
 ---
 

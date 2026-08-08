@@ -1,26 +1,93 @@
 ---
-isDraft: true
-title: IPFoxy 代理导入 EasyBR 教程
-description: 在 EasyBR 中添加 IPFoxy 代理的完整步骤：注册购买、获取 host:port 参数、配置 HTTP/SOCKS5、批量导入与常见错误排查（待核实补写）。
+title: IPFoxy 代理怎么样？产品类型、适用场景与使用参考
+description: IPFoxy 代理服务商整理：支持   - residential,   - static-residential,   - datacenter，协议与认证方式、适用场景、优点与限制。资料核验中，以官方页面为准。
 pageType: providers
 provider: IPFoxy
-providerUrl: https://www.ipfoxy.net
-supportedProxyTypes:
+slug: ipfoxy
+status: draft
+officialUrl: https://www.ipfoxy.net
+proxyTypes:
   - residential
   - static-residential
   - datacenter
+protocols:
+  - http
+  - https
+  - socks5
 authentication:
   - username-password
+  - api
+  - ip-whitelist
+pricingModels:
+  - traffic
+  - ip
+  - package
 regions: 待核实
-supportsApi: true
-supportsWhitelist: true
-officialDocs: 待核实
-verified: false
-summary: IPFoxy 代理导入 EasyBR 的使用说明（待撰写）。
-takeaway: 待撰写
+sources:
+  - title: IPFoxy 官网
+    url: https://www.ipfoxy.net
+summary: IPFoxy 提供   - residential/  - static-residential/  - datacenter 代理，主要适合enterprise、sme，本文整理其产品类型、适用场景与注意事项（资料核验中）。
+takeaway: IPFoxy 的适用结论待核实后补充。
 author: EasyBR 团队
 updatedAt: 2026-08-08
-disclosure: 本篇为教程占位，参数为虚构示例；实际套餐与接口以服务商官方页面为准，资料核实后请填写 lastVerified。
+disclosure: 本文基于服务商官方公开资料整理，具体能力以官方页面为准；资料核实完成后将 status 改为 published 并补充 lastVerified 对应信息。
 ---
 
-> 教程待撰写。核实 IPFoxy 官方资料后，参考 [NetNut 教程](../netnut/) 的 13 段结构完成本文，并设置 `lastVerified` 与 `verified: true`。
+> 资料核验中（status: draft）。核实 IPFoxy 官方资料后，按下方 13 节结构补全正文，
+> 并在 `src/data/providers.json` 中将其 status 改为 published、补充 sourceUrls 与核验信息后发布。
+
+## 一句话结论
+
+（待核实后填写）
+
+## 基本信息
+
+- 官网：https://www.ipfoxy.net
+
+## 提供哪些代理产品
+
+  - residential
+  - static-residential
+  - datacenter
+
+## 适合哪些用户
+
+（待核实后填写）
+
+## 主要优点
+
+（待核实后填写）
+
+## 需要注意的限制
+
+（待核实后填写）
+
+## 覆盖国家与定位粒度
+
+（待核实后填写）
+
+## 认证和连接方式
+
+  - username-password
+  - api
+  - ip-whitelist
+
+## 价格与试用说明
+
+（仅官方公布信息，无证据不写）
+
+## 官方入口与文档
+
+https://www.ipfoxy.net
+
+## 同类服务商
+
+（待核实后填写，仅链已发布页）
+
+## 信息来源与核验日期
+
+（待核实后补充 sources 与核验日期）
+
+## 使用代理的配套工具
+
+（EasyBR 一行简介 + 入口）

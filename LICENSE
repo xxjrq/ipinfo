@@ -1,3 +1,15 @@
+# 适用范围说明
+#
+# 本 MIT 许可仅适用于本仓库的网站程序代码（Astro/Starlight 工程、脚本、
+# 样式与配置文件等可执行与构建代码）。
+#
+# 仓库内的原创 Markdown 文章内容采用 CC BY-SA 4.0 许可，见 LICENSE-CONTENT.md；
+# 结构化的服务商数据（src/data/providers.json 等）采用 CC BY 4.0 许可，见 LICENSE-DATA.md。
+# 第三方品牌名称、商标、Logo 及被引用参考站点的原文与图片均归各权利人所有，
+# 不属于本仓库可授权的范围。
+#
+# 本许可变更不影响内容与数据各自的授权条款，请按对应文件执行。
+
 MIT License
 
 Copyright (c) 2026 EasyBR

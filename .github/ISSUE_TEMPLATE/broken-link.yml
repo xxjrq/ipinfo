@@ -1,0 +1,40 @@
+name: 失效链接
+description: 报告站点上的死链或指向错误地址的链接
+title: "[死链] 页面标题"
+labels: [broken-link]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢报告失效链接。请填写包含死链的页面地址、失效链接本身以及（如已知）正确的目标地址。
+  - type: input
+    id: pageUrl
+    attributes:
+      label: 页面 URL
+      description: 包含失效链接的页面地址
+      placeholder: https://xxjrq.github.io/ipinfo/providers/netnut/
+    validations:
+      required: true
+  - type: input
+    id: brokenUrl
+    attributes:
+      label: 失效链接
+      description: 点击后无法访问或返回错误页的链接地址
+      placeholder: https://www.example.com/old-page
+    validations:
+      required: true
+  - type: input
+    id: expectedUrl
+    attributes:
+      label: 期望地址（可选）
+      description: 如果知道正确的新地址，请填写
+      placeholder: https://www.example.com/new-page
+    validations:
+      required: false
+  - type: textarea
+    id: notes
+    attributes:
+      label: 补充说明（可选）
+      description: 失效表现（404 / 跳转到无关页面 / 域名变更等）
+    validations:
+      required: false
