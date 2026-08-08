@@ -1,0 +1,30 @@
+{
+  "name": "ipinfo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "EasyBR IP 资源中心 — 代理 IP 选型、配置、检测与指纹浏览器使用指南",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check",
+    "validate": "node scripts/validate-content.mjs",
+    "links": "node scripts/check-links.mjs",
+    "gen:providers": "node scripts/generate-provider-pages.mjs",
+    "ci": "npm run validate && npm run check && npm run build && npm run links"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "@astrojs/starlight": "^0.41.7",
+    "astro": "^7.2.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "gray-matter": "^4.0.3",
+    "js-yaml": "^4.3.1",
+    "typescript": "^6.0.3"
+  }
+}

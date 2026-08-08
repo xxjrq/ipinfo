@@ -1,0 +1,250 @@
+/* ============================================================
+   EasyBR IP 资源中心 — 站点自定义样式
+   品牌主色：#722ed1（EasyBR DEFAULT_PRIMARY）
+   Starlight 主题色基于 CSS 变量 --sl-color-accent-*
+   ============================================================ */
+
+/* 品牌紫色调（浅色模式） */
+:root {
+	--eb-brand: #722ed1;
+	--eb-brand-600: #531dab;
+	--eb-brand-100: #efdbff;
+
+	--sl-color-accent-high: var(--eb-brand-600);
+	--sl-color-accent: var(--eb-brand);
+	--sl-color-accent-low: var(--eb-brand-100);
+
+	--sl-color-accent-600: var(--eb-brand-600);
+	--sl-color-accent-500: var(--eb-brand);
+}
+
+/* 深色模式 */
+:root[data-theme='dark'] {
+	--sl-color-accent-high: #c99bff;
+	--sl-color-accent: #b37feb;
+	--sl-color-accent-low: #2b1150;
+}
+
+/* 站点头部导航 */
+.site-title {
+	font-weight: 700;
+}
+
+/* 首页落地页样式（src/pages/index.astro） */
+.ip-landing {
+	max-width: 60rem;
+	margin: 0 auto;
+	padding: 2rem 1rem 4rem;
+}
+
+.ip-hero {
+	text-align: center;
+	padding: 3rem 1rem 2rem;
+}
+
+.ip-hero h1 {
+	font-size: clamp(1.8rem, 4vw, 2.8rem);
+	line-height: 1.25;
+	margin-bottom: 1rem;
+}
+
+.ip-hero .ip-subtitle {
+	font-size: 1.1rem;
+	color: var(--sl-color-gray-4);
+	max-width: 36rem;
+	margin: 0 auto 1.75rem;
+}
+
+.ip-search {
+	display: flex;
+	justify-content: center;
+	gap: 0.75rem;
+	margin-bottom: 1.5rem;
+	flex-wrap: wrap;
+}
+
+.ip-search-box {
+	position: relative;
+	width: min(100%, 26rem);
+}
+
+.ip-search-box input {
+	width: 100%;
+	padding: 0.7rem 1rem 0.7rem 2.5rem;
+	border-radius: 0.6rem;
+	border: 1px solid var(--sl-color-gray-5);
+	background: var(--sl-color-gray-7);
+	font-size: 1rem;
+}
+
+.ip-search-box svg {
+	position: absolute;
+	left: 0.8rem;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 1.1rem;
+	height: 1.1rem;
+	color: var(--sl-color-gray-4);
+}
+
+.ip-hero-actions {
+	display: flex;
+	justify-content: center;
+	gap: 0.75rem;
+	flex-wrap: wrap;
+}
+
+.ip-hero-actions a {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	padding: 0.65rem 1.4rem;
+	border-radius: 0.6rem;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.ip-hero-actions .ip-btn-primary {
+	background: var(--eb-brand);
+	color: #fff;
+}
+
+.ip-hero-actions .ip-btn-secondary {
+	background: var(--sl-color-gray-7);
+	color: var(--sl-color-text);
+	border: 1px solid var(--sl-color-gray-5);
+}
+
+.ip-section {
+	margin-top: 2.5rem;
+}
+
+.ip-section h2 {
+	font-size: 1.5rem;
+	margin-bottom: 1.25rem;
+	border: none;
+}
+
+.ip-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+	gap: 1rem;
+}
+
+.ip-card {
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 0.75rem;
+	padding: 1.1rem 1.25rem;
+	background: var(--sl-color-gray-7);
+	transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.ip-card:hover {
+	border-color: var(--eb-brand);
+	transform: translateY(-2px);
+}
+
+.ip-card h3 {
+	font-size: 1.05rem;
+	margin: 0 0 0.4rem;
+}
+
+.ip-card p {
+	font-size: 0.9rem;
+	color: var(--sl-color-gray-4);
+	margin: 0;
+}
+
+.ip-card .ip-meta {
+	font-size: 0.78rem;
+	color: var(--sl-color-gray-5);
+	margin-top: 0.5rem;
+}
+
+.ip-provider-logo {
+	width: 2rem;
+	height: 2rem;
+	border-radius: 0.5rem;
+	background: var(--eb-brand-100);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 700;
+	color: var(--eb-brand-600);
+	margin-bottom: 0.6rem;
+	font-size: 0.9rem;
+}
+
+.ip-steps {
+	counter-reset: ipstep;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+	gap: 0.75rem;
+}
+
+.ip-step {
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 0.75rem;
+	padding: 1rem;
+	background: var(--sl-color-gray-7);
+}
+
+.ip-step b {
+	display: block;
+	color: var(--eb-brand);
+	font-size: 0.85rem;
+	margin-bottom: 0.35rem;
+}
+
+.ip-cta {
+	text-align: center;
+	border: 1px solid var(--eb-brand);
+	border-radius: 1rem;
+	padding: 2.5rem 1.5rem;
+	margin-top: 3rem;
+	background: linear-gradient(180deg, var(--sl-color-gray-7), transparent);
+}
+
+.ip-cta h2 {
+	border: none;
+	margin-bottom: 0.5rem;
+}
+
+.ip-cta p {
+	color: var(--sl-color-gray-4);
+	max-width: 32rem;
+	margin: 0 auto 1.5rem;
+}
+
+.ip-features {
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+	gap: 0.5rem 1.5rem;
+	margin: 0 0 1.5rem;
+	padding: 0;
+	text-align: left;
+}
+
+.ip-features li::before {
+	content: '✓';
+	color: var(--eb-brand);
+	font-weight: 700;
+	margin-right: 0.4rem;
+}
+
+.ip-note {
+	font-size: 0.8rem;
+	color: var(--sl-color-gray-5);
+	margin-top: 1rem;
+}
+
+/* 移动端 */
+@media (max-width: 48rem) {
+	.ip-landing {
+		padding: 1.5rem 0.5rem 3rem;
+	}
+	.ip-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}
