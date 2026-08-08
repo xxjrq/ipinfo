@@ -12,11 +12,15 @@
  * 违反规则 → 退出码 1；警告不影响退出码。
  */
 import { readFileSync, readdirSync, statSync } from 'node:fs';
-import { join, relative, dirname, normalize } from 'node:path';
+import { join, relative, dirname, normalize, basename } from 'node:path';
 import matter from 'gray-matter';
 
 const DOCS_DIR = join(process.cwd(), 'src/content/docs');
 const PROVIDERS_JSON = join(process.cwd(), 'src/data/providers.json');
+
+/** 生产模式：ALLOW_DRAFTS 未设为 true 时，未核验/占位内容直接判错 */
+const PROD = process.env.ALLOW_DRAFTS !== 'true';
+const PLACEHOLDER = /内容建设中|教程待撰写/;
 
 const REAL_IP_PORT = /\b(\d{1,3}\.){3}\d{1,3}:\d{2,5}\b/g;
 const CRED_ASSIGN = /(?:user|username|password)\s*[:=]\s*([^\s,"']+)/gi;
@@ -68,16 +72,27 @@ function validateFile(file) {
 		}
 	}
 
-	// 4. 供应商文章完整性（verified:false 表示占位/待核实，允许缺 lastVerified）
-	if (pageType === 'providers' || section === 'providers') {
+	// 4. 供应商文章完整性（verified:false 表示占位/待核实，允许缺 lastVerified；index.md 为栏目页，不适用）
+	if ((pageType === 'providers' || section === 'providers') && basename(file) !== 'index.md') {
 		const required = ['provider', 'providerUrl', 'supportedProxyTypes', 'authentication', 'disclosure'];
 		for (const field of required) {
 			if (!data[field]) errors.push(`${rel(file)}: 供应商文章缺少 ${field}`);
 		}
 		if (data.verified === false) {
-			warnings.push(`${rel(file)}: 供应商文章处于待核实占位状态（verified:false），发布前需核实并填写 lastVerified`);
+			if (PROD && !basename(file).startsWith('_')) {
+				errors.push(`${rel(file)}: 生产页面处于 verified:false 未核实状态，必须先核实并重命名去 _ 前缀`);
+			} else {
+				warnings.push(`${rel(file)}: 供应商文章处于待核实占位状态（verified:false），发布前需核实并填写 lastVerified`);
+			}
 		} else if (!data.lastVerified) {
 			errors.push(`${rel(file)}: 供应商文章缺少 lastVerified（核实日期）`);
+		}
+	}
+
+	// 4.5 生产页面正文/description 不得含占位短语
+	if (PROD && !basename(file).startsWith('_')) {
+		if (PLACEHOLDER.test(content) || PLACEHOLDER.test(data.description || '')) {
+			errors.push(`${rel(file)}: 生产页面含占位短语（${PLACEHOLDER}）`);
 		}
 	}
 
@@ -147,12 +162,15 @@ try {
 	const { providers } = JSON.parse(readFileSync(PROVIDERS_JSON, 'utf8'));
 	const providerPages = new Set(
 		readdirSync(join(DOCS_DIR, 'providers'))
-			.filter((f) => f.endsWith('.md'))
+			.filter((f) => f.endsWith('.md') && !f.startsWith('_'))
 			.map((f) => f.replace(/\.md$/, ''))
 	);
 	for (const p of providers) {
 		if (!providerPages.has(p.slug)) {
-			warnings.push(`providers.json 中「${p.name}」缺少对应文档 providers/${p.slug}.md（可用 npm run gen:providers 生成）`);
+			const draftExists = existsAsFile(join(DOCS_DIR, 'providers', `_${p.slug}.md`));
+			if (!draftExists) {
+				warnings.push(`providers.json 中「${p.name}」缺少对应文档 providers/${p.slug}.md（可用 npm run gen:providers 生成）`);
+			}
 		}
 	}
 } catch (e) {

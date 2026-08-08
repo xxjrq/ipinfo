@@ -12,9 +12,12 @@
     "astro": "astro",
     "check": "astro check",
     "validate": "node scripts/validate-content.mjs",
+    "validate:dev": "ALLOW_DRAFTS=true node scripts/validate-content.mjs",
+    "check-drafts": "node scripts/check-drafts.mjs",
+    "check-dist": "node scripts/check-dist.mjs",
     "links": "node scripts/check-links.mjs",
     "gen:providers": "node scripts/generate-provider-pages.mjs",
-    "ci": "npm run validate && npm run check && npm run build && npm run links"
+    "ci": "npm run validate && npm run check-drafts && npm run check && npm run build && npm run check-dist && npm run links"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",

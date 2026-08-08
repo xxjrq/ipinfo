@@ -1,0 +1,9 @@
+---
+const { starlightRoute } = Astro.locals;
+const entry = starlightRoute.entry;
+// StarlightPage（自定义页面，如营销首页）的 entry 是合成数据且 body 为空，
+// 此时页面自带 H1，不再输出框架标题，保证全页唯一 H1
+const isRealDocsPage = Boolean(entry && entry.body !== '');
+---
+
+{isRealDocsPage && <h1 id="_top">{entry.data.title}</h1>}

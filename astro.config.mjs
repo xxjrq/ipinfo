@@ -40,6 +40,9 @@ export default defineConfig({
 			pagination: false,
 			credits: false,
 			customCss: ['./src/styles/custom.css'],
+			components: {
+				PageTitle: './src/components/PageTitle.astro',
+			},
 			sidebar: [
 				{ label: '首页', link: '/' },
 				{
@@ -74,6 +77,10 @@ export default defineConfig({
 					label: '常见问题',
 					items: [{ autogenerate: { directory: 'faq' } }],
 				},
+				{
+					label: '关于',
+					items: [{ autogenerate: { directory: 'about' } }],
+				},
 				{ label: '免费下载 EasyBR', link: downloadUrl },
 			],
 			head: [
@@ -85,24 +92,22 @@ export default defineConfig({
 						'@graph': [
 							{
 								'@type': 'Organization',
+								'@id': 'https://www.ebrower.com/#organization',
 								name: 'EasyBR',
-								url: site,
-								logo: `${site}${base}favicon.svg`,
+								url: 'https://www.ebrower.com/',
+								logo: {
+									'@type': 'ImageObject',
+									url: `${site}${base}favicon.svg`,
+								},
 								sameAs: [],
 							},
 							{
 								'@type': 'WebSite',
+								'@id': `${site}${base}#website`,
 								name: 'EasyBR IP 资源中心',
-								url: site,
+								url: `${site}${base}`,
 								inLanguage: 'zh-CN',
-								potentialAction: {
-									'@type': 'SearchAction',
-									target: {
-										'@type': 'EntryPoint',
-										urlTemplate: `${site}${base}search/?q={search_term_string}`,
-									},
-									'query-input': 'required name=search_term_string',
-								},
+								publisher: { '@id': 'https://www.ebrower.com/#organization' },
 							},
 						],
 					}),

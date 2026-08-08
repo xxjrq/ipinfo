@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# GitHub Pages 部署后需替换为实际站点地址
-# Sitemap: https://YOUR_USERNAME.github.io/ipinfo/sitemap-index.xml
+Sitemap: https://xxjrq.github.io/ipinfo/sitemap-index.xml

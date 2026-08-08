@@ -1,34 +1,34 @@
 # EasyBR IP 资源中心
 
-> 代理 IP 选型、配置、检测与指纹浏览器使用指南。覆盖住宅 IP、数据中心 IP、SOCKS5 配置，以及 20+ 代理服务商的 EasyBR 导入教程。
+> 代理 IP 选型、配置、检测与指纹浏览器使用指南。覆盖住宅 IP、数据中心 IP、SOCKS5 配置，以及代理服务商的 EasyBR 导入教程。所有教程均经官方资料核实后发布。
 
 ## 站点定位
 
 - 面向：跨境电商运营者、社媒多账号用户、数据采集者、Web3 参与者
-- 产品：EasyBR 免费指纹浏览器（5 个永久免费环境，HTTP/HTTPS/SOCKS5，Windows/macOS）
+- 产品：EasyBR 免费指纹浏览器（5 个永久免费环境，支持 HTTP/HTTPS/SOCKS5，Windows/macOS）
 
 ## 入门
 
-- /getting-started/intro/ — 站点使用指南
-- /basics/what-is-proxy-ip/ — 什么是代理 IP
-- /proxy-types/ — 代理类型大全
+- https://xxjrq.github.io/ipinfo/getting-started/ — 开始使用：四步上手路径
+- https://xxjrq.github.io/ipinfo/basics/ — IP 基础：代理协议与概念
+- https://xxjrq.github.io/ipinfo/proxy-types/ — 代理类型：住宅/数据中心/移动/IP
+- https://xxjrq.github.io/ipinfo/comparisons/ — 选型对比：方案取舍方法论
 
-## EasyBR 配置教程
+## EasyBR 配置
 
-- /easybr/add-http-proxy/：在 EasyBR 添加 HTTP/HTTPS 代理
-- /easybr/add-socks5-proxy/：在 EasyBR 添加 SOCKS5 代理
-- /easybr/batch-import-proxy/：批量导入代理
-- /troubleshooting/proxy-region-mismatch/：代理时区/语言/经纬度匹配
-- /troubleshooting/webrtc-leak/：WebRTC 泄漏检查
-- /troubleshooting/dns-leak/：DNS 泄漏检查
+- https://xxjrq.github.io/ipinfo/easybr/ — EasyBR 代理配置说明
+- https://xxjrq.github.io/ipinfo/troubleshooting/ — 排查工具：连接失败与泄漏定位
 
-## 服务商教程
+## 服务商
 
-- /providers/netnut/：NetNut 导入教程
-- /providers/bright-data/：Bright Data 导入教程
-- 更多服务商：/providers/
+- https://xxjrq.github.io/ipinfo/providers/ — 服务商选择标准与导入教程（逐步补充）
+
+## 其他
+
+- https://xxjrq.github.io/ipinfo/faq/ — 常见问题
+- https://xxjrq.github.io/ipinfo/about/editorial-policy/ — 编辑与事实核验政策
 
 ## 内容与事实管理
 
-- 本按时间内容最后验证于 2026-08-08。供应商价格、覆盖国家、API 地址随服务商变动。
-- 示例代理参数一律使用虚构数据，禁止出现真实账号密码。参见 /about/editorial-policy/（建设中）。
+- 本站内容最后更新于 2026-08-08。服务商价格、覆盖国家、API 地址随服务商变动，以官方页面为准。
+- 示例代理参数一律使用虚构数据（example.com / demo_user / demo_password），禁止出现真实账号密码，详见编辑与事实核验政策。

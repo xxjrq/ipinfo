@@ -1,11 +1,14 @@
 ---
+import { getCollection } from 'astro:content';
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 
 import { providers, updatedAt } from '../data/providers.json';
 
 const base = import.meta.env.BASE_URL;
-const downloadUrl =
-	'https://www.ebrower.com/down.html?utm_source=ipinfo&utm_medium=landing&utm_campaign=download';
+
+// 仅渲染已发布的正式内容页（草稿以 _ 前缀排除出构建，不在此集合中）
+const published = await getCollection('docs');
+const publishedSlugs = new Set(published.map((e) => e.id));
 
 const quickEntries = [
 	{ label: '住宅代理', desc: '真实家庭 IP，适合多账号防关联', href: 'proxy-types/residential-proxy/' },
@@ -14,7 +17,9 @@ const quickEntries = [
 	{ label: '移动代理', desc: '4G/5G 移动 IP，真实运营商网络', href: 'proxy-types/mobile-proxy/' },
 	{ label: 'HTTP/HTTPS 代理', desc: '网页与移动端通用代理协议', href: 'basics/http-https-proxy/' },
 	{ label: 'SOCKS5 代理', desc: '任意 TCP/UDP 流量，兼容更多应用', href: 'basics/socks5-proxy/' },
-];
+].filter((e) => publishedSlugs.has(e.href.replace(/\/$/, '')));
+
+const publishedProviders = providers.filter((p) => publishedSlugs.has('providers/' + p.slug));
 
 const scenarios = [
 	'跨境电商',
@@ -36,7 +41,7 @@ const configFlow = [
 
 <StarlightPage
 	frontmatter={{
-		title: 'EasyBR IP 资源中心',
+		title: '代理IP选型与配置指南',
 		description:
 			'代理 IP 选型、配置、检测与指纹浏览器使用指南。找到合适的代理 IP，并快速配置到 EasyBR 免费指纹浏览器。',
 	}}
@@ -44,10 +49,9 @@ const configFlow = [
 	<main class="ip-landing">
 		<!-- Hero -->
 		<section class="ip-hero">
-			<h1>找到合适的代理 IP，并快速配置到浏览器</h1>
+			<h1>找到合适的代理 IP，并快速配置到 EasyBR</h1>
 			<p class="ip-subtitle">
-				住宅 IP、数据中心 IP、SOCKS5 配置教程，覆盖 20+ 代理服务商，导入
-				EasyBR 免费指纹浏览器即可使用。
+				住宅 IP、数据中心 IP、SOCKS5 配置教程，导入 EasyBR 免费指纹浏览器即可使用。
 			</p>
 			<div class="ip-search">
 				<div class="ip-search-box">
@@ -65,43 +69,53 @@ const configFlow = [
 			</div>
 			<div class="ip-hero-actions">
 				<a class="ip-btn-primary" href="https://www.ebrower.com/down.html?utm_source=ipinfo&utm_medium=hero&utm_campaign=download" rel="noopener">免费使用 EasyBR</a>
-				<a class="ip-btn-secondary" href={base + 'getting-started/intro/'}>查看配置教程</a>
+				<a class="ip-btn-secondary" href={base + 'getting-started/'}>查看配置教程</a>
 			</div>
 		</section>
 
 		<!-- 快速入口 -->
-		<section class="ip-section">
-			<h2>快速入口</h2>
-			<div class="ip-grid">
-				{
-					quickEntries.map((item) => (
-						<a class="ip-card" href={base + item.href}>
-							<h3>{item.label}</h3>
-							<p>{item.desc}</p>
-						</a>
-					))
-				}
-			</div>
-		</section>
+		{
+			quickEntries.length > 0 && (
+				<section class="ip-section">
+					<h2>快速入口</h2>
+					<div class="ip-grid">
+						{
+							quickEntries.map((item) => (
+								<a class="ip-card" href={base + item.href}>
+									<h3>{item.label}</h3>
+									<p>{item.desc}</p>
+								</a>
+							))
+						}
+					</div>
+				</section>
+			)
+		}
 
 		<!-- 服务商目录 -->
 		<section class="ip-section">
 			<h2>IP 服务商目录</h2>
-			<div class="ip-grid">
-				{
-					providers.map((p) => (
-						<a class="ip-card" href={base + 'providers/' + p.slug + '/'}>
-							<div class="ip-provider-logo" aria-hidden="true">{p.name.slice(0, 1).toUpperCase()}</div>
-							<h3>{p.name}</h3>
-							<p>{(p.proxyTypes || []).join(' · ')}</p>
-							<div class="ip-meta">
-								{p.regions || '覆盖地区待核实'}
-								{p.status === 'pending' ? ' · 资料待核实' : ''}
-							</div>
-						</a>
-					))
-				}
-			</div>
+			{
+				publishedProviders.length > 0 ? (
+					<div class="ip-grid">
+						{
+							publishedProviders.map((p) => (
+								<a class="ip-card" href={base + 'providers/' + p.slug + '/'}>
+									<div class="ip-provider-logo" aria-hidden="true">{p.name.slice(0, 1).toUpperCase()}</div>
+									<h3>{p.name}</h3>
+									<p>{(p.proxyTypes || []).join(' · ')}</p>
+									<div class="ip-meta">{p.regions || '覆盖地区以官方页面为准'}</div>
+								</a>
+							))
+						}
+					</div>
+				) : (
+					<p class="ip-note">
+						服务商导入教程正在逐步整理中。选择服务商的评估维度见
+						<a href={base + 'providers/'}>IP 服务商栏目</a>。
+					</p>
+				)
+			}
 		</section>
 
 		<!-- 使用场景 -->

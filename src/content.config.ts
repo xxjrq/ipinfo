@@ -13,6 +13,8 @@ const docs = defineCollection({
 	loader: docsLoader(),
 	schema: docsSchema({
 		extend: z.object({
+			/** 草稿标记：true = 未核验/占位，文件需 _ 前缀排除出生产构建（draft 为 Astro 保留键名，勿用） */
+			isDraft: z.boolean().optional(),
 			/** 文章类型，用于内容校验与分类 */
 			pageType: z
 				.enum([
