@@ -33,7 +33,7 @@ summary: Smartproxy / Decodo 提供   - residential/  - datacenter/  - mobile/  
 takeaway: Smartproxy / Decodo 的适用结论待核实后补充。
 author: EasyBR 团队
 updatedAt: 2026-08-08
-disclosure: 本文基于服务商官方公开资料整理，具体能力以官方页面为准；资料核实完成后将 status 改为 published 并补充 lastVerified 对应信息。
+disclosure: 本文基于服务商官方公开资料整理，具体能力以官方页面为准；资料核实完成后将 status 改为 published 并补充 updatedAt 对应信息。
 ---
 
 > 资料核验中（status: draft）。核实 Smartproxy / Decodo 官方资料后，按下方 13 节结构补全正文，

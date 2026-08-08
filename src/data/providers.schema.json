@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://xxjrq.github.io/ipinfo/schemas/providers.schema.json",
   "title": "EasyBR IP 资源库 — 服务商数据 Schema",
-  "description": "src/data/providers.json 的 JSON Schema。服务商状态机：draft（默认，未人工核实）→ verified（已核实，必须带 lastVerified 与 sourceUrls）→ outdated/inactive。",
+  "description": "src/data/providers.json 的 JSON Schema。服务商状态机：draft（默认，未人工核实）→ published（已核实发布，必须带 sourceUrls 与 updatedAt）→ outdated（信息过期）/ inactive（停止运营）。旧字段（verified/providerUrl/supportedProxyTypes/lastVerified/officialDocs）已废弃。",
   "type": "object",
   "required": ["updatedAt", "note", "providers"],
   "additionalProperties": false,
@@ -25,7 +25,7 @@
         "slug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "description": "URL 用短标识，全局唯一" },
         "status": { "$ref": "#/$defs/enums/status" },
         "officialUrl": { "type": "string", "description": "官网地址；国内服务商未核实前可为空字符串" },
-        "officialDocs": { "type": "string", "description": "官方文档地址；未核验为空字符串" },
+        "description": { "type": "string", "description": "一句话简介（含“资料待核验”提示）" },
         "pricingUrl": { "type": "string", "description": "价格页地址；未核验为空字符串" },
         "trialUrl": { "type": "string", "description": "免费试用入口地址；未核验为空字符串" },
         "proxyTypes": {
@@ -43,12 +43,15 @@
           "uniqueItems": true,
           "items": { "$ref": "#/$defs/enums/authentication" }
         },
-        "pricingModel": {
+        "pricingModels": {
           "type": "array",
           "uniqueItems": true,
           "items": { "$ref": "#/$defs/enums/pricingModel" }
         },
         "regions": { "type": "array", "items": { "type": "string" }, "description": "覆盖国家/地区描述（如 ['190+ 国家']），待核验为空数组" },
+        "features": { "type": "array", "items": { "type": "string" }, "description": "亮点能力（待核验为空数组）" },
+        "suitableFor": { "type": "array", "items": { "type": "string" }, "description": "适用场景（待核验为空数组）" },
+        "limitations": { "type": "array", "items": { "type": "string" }, "description": "限制/不足（待核验为空数组）" },
         "geoGranularity": {
           "type": "array",
           "uniqueItems": true,
@@ -88,28 +91,27 @@
               "url": { "type": "string", "format": "uri" }
             }
           },
-          "description": "信息来源（官网/文档等）；verified 状态必须 ≥1 条"
+          "description": "信息来源（官网/文档等）；published 状态必须 ≥1 条"
         },
-        "lastVerified": { "type": ["string", "null"], "format": "date", "description": "最近人工核实日期；verified 状态必填" },
-        "updatedAt": { "type": "string", "format": "date" },
+        "updatedAt": { "type": "string", "format": "date", "description": "最近核验/更新时间；published 状态必填" },
         "notes": { "type": "string", "description": "备注；数据未核验/字段缺失时注明“待核验”" }
       },
       "allOf": [
         {
-          "description": "status=verified 时必须有核实日期与至少一条来源",
-          "if": { "properties": { "status": { "const": "verified" } }, "required": ["status"] },
+          "description": "status=published 时必须有至少一条来源与更新时间",
+          "if": { "properties": { "status": { "const": "published" } }, "required": ["status"] },
           "then": {
             "properties": {
-              "lastVerified": { "type": "string", "format": "date" },
-              "sourceUrls": { "type": "array", "minItems": 1 }
+              "sourceUrls": { "type": "array", "minItems": 1 },
+              "updatedAt": { "type": "string", "format": "date" }
             },
-            "required": ["lastVerified"]
+            "required": ["sourceUrls", "updatedAt"]
           }
         }
       ]
     },
     "enums": {
-      "status": { "enum": ["draft", "verified", "outdated", "inactive"] },
+      "status": { "enum": ["draft", "published", "outdated", "inactive"] },
       "proxyType": { "enum": ["residential", "static-residential", "datacenter", "mobile", "isp"] },
       "protocol": { "enum": ["http", "https", "socks5"] },
       "authentication": { "enum": ["username-password", "ip-whitelist", "api"] },

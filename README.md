@@ -174,6 +174,6 @@ GitHub Pages 在国内不稳定。如面向百度流量，建议后续迁移到�
 
 ## 更新供应商信息
 
-- 编辑 `src/data/providers.json`（首页卡片数据）+ 对应 `providers/<slug>.md` 正文
-- 修改 `updatedAt` 与 `lastVerified`
+- 编辑 `src/data/providers.json`（全量数据源）+ 对应 `providers/_<slug>.md` 正文（草稿前缀）
+- 修改 `updatedAt`，核验后将 `status` 改为 `published`（公开数据与站点构建同步生效）
 - 跑 `npm run ci` 确认无失效内链后提交

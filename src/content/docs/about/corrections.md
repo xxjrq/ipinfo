@@ -3,7 +3,7 @@ title: 内容纠错与反馈
 description: 如何报告本站内容错误、失效链接或建议收录新服务商：通过 GitHub Issue 按模板提交，说明受理、核实、修正的处理流程与本站的修订承诺。
 pageType: about
 summary: 发现内容错误、链接失效或想推荐服务商，请到 GitHub Issue 按 incorrect-information、broken-link、add-provider 三类模板提交，核实后我们会修正并更新核实日期。
-takeaway: 所有纠错公开进行，修正会同步更新 lastVerified 与 updatedAt；过期内容在修正前会先标注 outdated。
+takeaway: 所有纠错公开进行，修正会同步更新 updatedAt；过期内容在修正前会先标注 outdated。
 author: EasyBR 团队
 updatedAt: 2026-08-08
 ---
@@ -24,7 +24,7 @@ updatedAt: 2026-08-08
 
 1. **受理**：确认 Issue 信息完整，无法确认的会回复补充。
 2. **核实**：对照官方页面或相关证据核对。
-3. **修正**：修改正文，并同步更新该文的 lastVerified 或 updatedAt。
+3. **修正**：修改正文，并同步更新该文的 updatedAt。
 4. **回复**：在 Issue 中说明处理结果后关闭。
 
 ## 修订记录
