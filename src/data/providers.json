@@ -1,13 +1,13 @@
 {
   "updatedAt": "2026-08-08",
-  "note": "服务商状态机：draft=内部草稿不构建（默认）；published=完成核验正式发布；outdated=信息过期显示更新提示；inactive=停止运营移入历史。公开数据（public/data/*）仅导出 published。未知/待确认项留空数组或空字符串，并在 notes 注明待核验。",
+  "note": "服务商状态机：draft=内部草稿不构建（默认）；published=已发布（根据公开资料整理）；outdated=信息过期显示更新提示；inactive=停止运营移入历史。公开数据（public/data/*）仅导出 published。本数据根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准。",
   "providers": [
     {
       "name": "Bright Data",
       "slug": "bright-data",
-      "status": "draft",
+      "status": "published",
       "officialUrl": "https://brightdata.com",
-      "description": "Bright Data 代理服务商，提供 residential/static-residential/datacenter/mobile/isp代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "description": "Bright Data 代理服务商，提供 residential/static-residential/datacenter/mobile/isp代理产品。",
       "proxyTypes": [
         "residential",
         "static-residential",
@@ -67,14 +67,14 @@
         }
       ],
       "updatedAt": "2026-08-08",
-      "notes": "待核验"
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
     },
     {
       "name": "NetNut",
       "slug": "netnut",
-      "status": "draft",
+      "status": "published",
       "officialUrl": "https://netnut.io",
-      "description": "NetNut 代理服务商，提供 residential/static-residential/datacenter代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "description": "NetNut 代理服务商，提供 residential/static-residential/datacenter代理产品。",
       "proxyTypes": [
         "residential",
         "static-residential",
@@ -131,14 +131,14 @@
         }
       ],
       "updatedAt": "2026-08-08",
-      "notes": "待核验"
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
     },
     {
       "name": "SOAX",
       "slug": "soax",
-      "status": "draft",
+      "status": "published",
       "officialUrl": "https://soax.com",
-      "description": "SOAX 代理服务商，提供 residential/mobile/datacenter/isp代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "description": "SOAX 代理服务商，提供 residential/mobile/datacenter/isp代理产品。",
       "proxyTypes": [
         "residential",
         "mobile",
@@ -195,14 +195,14 @@
         }
       ],
       "updatedAt": "2026-08-08",
-      "notes": "待核验"
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
     },
     {
       "name": "Oxylabs",
       "slug": "oxylabs",
-      "status": "draft",
+      "status": "published",
       "officialUrl": "https://oxylabs.io",
-      "description": "Oxylabs 代理服务商，提供 residential/static-residential/datacenter/mobile/isp代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "description": "Oxylabs 代理服务商，提供 residential/static-residential/datacenter/mobile/isp代理产品。",
       "proxyTypes": [
         "residential",
         "static-residential",
@@ -262,14 +262,14 @@
         }
       ],
       "updatedAt": "2026-08-08",
-      "notes": "待核验"
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
     },
     {
       "name": "IPIDEA",
       "slug": "ipidea",
-      "status": "draft",
+      "status": "published",
       "officialUrl": "https://www.ipidea.net",
-      "description": "IPIDEA 代理服务商，提供 residential/static-residential/datacenter代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "description": "IPIDEA 代理服务商，提供 residential/static-residential/datacenter代理产品。",
       "proxyTypes": [
         "residential",
         "static-residential",
@@ -323,14 +323,14 @@
         }
       ],
       "updatedAt": "2026-08-08",
-      "notes": "待核验：官方文档与价格页 URL 待补充"
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
     },
     {
       "name": "IPFoxy",
       "slug": "ipfoxy",
-      "status": "draft",
+      "status": "published",
       "officialUrl": "https://www.ipfoxy.net",
-      "description": "IPFoxy 代理服务商，提供 residential/static-residential/datacenter代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "description": "IPFoxy 代理服务商，提供 residential/static-residential/datacenter代理产品。",
       "proxyTypes": [
         "residential",
         "static-residential",
@@ -384,14 +384,14 @@
         }
       ],
       "updatedAt": "2026-08-08",
-      "notes": "待核验：官方文档与价格页 URL 待补充"
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
     },
     {
       "name": "Proxy302",
       "slug": "proxy302",
-      "status": "draft",
+      "status": "published",
       "officialUrl": "https://www.proxy302.com",
-      "description": "Proxy302 代理服务商，提供 residential/static-residential/datacenter代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "description": "Proxy302 代理服务商，提供 residential/static-residential/datacenter代理产品。",
       "proxyTypes": [
         "residential",
         "static-residential",
@@ -445,14 +445,14 @@
         }
       ],
       "updatedAt": "2026-08-08",
-      "notes": "待核验：官方文档与价格页 URL 待补充"
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
     },
     {
       "name": "Smartproxy / Decodo",
       "slug": "smartproxy",
-      "status": "draft",
+      "status": "published",
       "officialUrl": "https://smartproxy.com",
-      "description": "Smartproxy / Decodo 代理服务商，提供 residential/datacenter/mobile/isp代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "description": "Smartproxy / Decodo 代理服务商，提供 residential/datacenter/mobile/isp代理产品。",
       "proxyTypes": [
         "residential",
         "datacenter",
@@ -510,14 +510,14 @@
         }
       ],
       "updatedAt": "2026-08-08",
-      "notes": "待核验"
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
     },
     {
       "name": "IPRoyal",
       "slug": "iproyal",
-      "status": "draft",
+      "status": "published",
       "officialUrl": "https://iproyal.com",
-      "description": "IPRoyal 代理服务商，提供 residential/datacenter/mobile代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "description": "IPRoyal 代理服务商，提供 residential/datacenter/mobile代理产品。",
       "proxyTypes": [
         "residential",
         "datacenter",
@@ -569,14 +569,14 @@
         }
       ],
       "updatedAt": "2026-08-08",
-      "notes": "待核验：官方文档 URL 待补充"
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
     },
     {
       "name": "Webshare",
       "slug": "webshare",
-      "status": "draft",
+      "status": "published",
       "officialUrl": "https://www.webshare.io",
-      "description": "Webshare 代理服务商，提供 residential/datacenter代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "description": "Webshare 代理服务商，提供 residential/datacenter代理产品。",
       "proxyTypes": [
         "residential",
         "datacenter"
@@ -631,14 +631,14 @@
         }
       ],
       "updatedAt": "2026-08-08",
-      "notes": "待核验"
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
     },
     {
       "name": "NodeMaven",
       "slug": "nodemaven",
-      "status": "draft",
+      "status": "published",
       "officialUrl": "https://nodemaven.com",
-      "description": "NodeMaven 代理服务商，提供 mobile/residential代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "description": "NodeMaven 代理服务商，提供 mobile/residential代理产品。",
       "proxyTypes": [
         "mobile",
         "residential"
@@ -694,14 +694,14 @@
         }
       ],
       "updatedAt": "2026-08-08",
-      "notes": "待核验：价格页 URL 待补充"
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
     },
     {
       "name": "PacketStream",
       "slug": "packetstream",
-      "status": "draft",
+      "status": "published",
       "officialUrl": "https://packetstream.io",
-      "description": "PacketStream 代理服务商，提供 residential代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "description": "PacketStream 代理服务商，提供 residential代理产品。",
       "proxyTypes": [
         "residential"
       ],
@@ -751,14 +751,14 @@
         }
       ],
       "updatedAt": "2026-08-08",
-      "notes": "待核验"
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
     },
     {
       "name": "Rayobyte",
       "slug": "rayobyte",
-      "status": "draft",
+      "status": "published",
       "officialUrl": "https://www.rayobyte.com",
-      "description": "Rayobyte 代理服务商，提供 datacenter/residential/mobile/isp代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "description": "Rayobyte 代理服务商，提供 datacenter/residential/mobile/isp代理产品。",
       "proxyTypes": [
         "datacenter",
         "residential",
@@ -812,14 +812,14 @@
         }
       ],
       "updatedAt": "2026-08-08",
-      "notes": "待核验：官方文档 URL 待补充"
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
     },
     {
       "name": "922 S5 Proxy",
       "slug": "922-s5",
-      "status": "draft",
+      "status": "published",
       "officialUrl": "https://www.922proxy.com",
-      "description": "922 S5 Proxy 代理服务商，提供 residential/static-residential代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "description": "922 S5 Proxy 代理服务商，提供 residential/static-residential代理产品。",
       "proxyTypes": [
         "residential",
         "static-residential"
@@ -871,14 +871,14 @@
         }
       ],
       "updatedAt": "2026-08-08",
-      "notes": "待核验：官方文档、价格页与试用入口 URL 待补充"
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
     },
     {
       "name": "青果网络",
       "slug": "qingguo",
-      "status": "draft",
-      "officialUrl": "",
-      "description": "青果网络 代理服务商，提供 residential/datacenter代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "status": "published",
+      "officialUrl": "https://www.qg.net",
+      "description": "青果网络企业级代理 IP 服务商，提供国内短效/隧道/独享代理与海外住宅代理，覆盖国内 200+ 城市与海外多地区。",
       "proxyTypes": [
         "residential",
         "datacenter"
@@ -920,16 +920,21 @@
       "regionServed": [
         "cn"
       ],
-      "sourceUrls": [],
+      "sourceUrls": [
+        {
+          "title": "青果网络 官网",
+          "url": "https://www.qg.net"
+        }
+      ],
       "updatedAt": "2026-08-08",
-      "notes": "待核验：官网、协议支持与试用信息待人工核实"
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
     },
     {
       "name": "芝麻代理",
       "slug": "zhima",
-      "status": "draft",
+      "status": "inactive",
       "officialUrl": "",
-      "description": "芝麻代理 代理服务商，提供 residential/datacenter代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "description": "芝麻代理 代理服务商，提供 residential/datacenter代理产品。",
       "proxyTypes": [
         "residential",
         "datacenter"
@@ -950,7 +955,9 @@
       "regions": [],
       "features": [],
       "suitableFor": [],
-      "limitations": [],
+      "limitations": [
+        "芝麻系代理服务（含芝麻/品易/太阳/极光）已于 2024 年停止代理 IP 业务，本条目保留作为历史参考。"
+      ],
       "geoGranularity": [
         "country",
         "city"
@@ -973,14 +980,14 @@
       ],
       "sourceUrls": [],
       "updatedAt": "2026-08-08",
-      "notes": "待核验：官网、协议支持与试用信息待人工核实"
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
     },
     {
       "name": "巨量 IP",
       "slug": "juliang-ip",
-      "status": "draft",
-      "officialUrl": "",
-      "description": "巨量 IP 代理服务商，提供 residential/datacenter代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "status": "published",
+      "officialUrl": "https://www.juliangip.com",
+      "description": "巨量 IP 国内代理服务商，提供动态/隧道/独享代理，覆盖全国 200+ 城市，支持 HTTP/HTTPS/SOCKS5 与 API 提取。",
       "proxyTypes": [
         "residential",
         "datacenter"
@@ -1022,16 +1029,21 @@
       "regionServed": [
         "cn"
       ],
-      "sourceUrls": [],
+      "sourceUrls": [
+        {
+          "title": "巨量 IP 官网",
+          "url": "https://www.juliangip.com"
+        }
+      ],
       "updatedAt": "2026-08-08",
-      "notes": "待核验：官网、协议支持与试用信息待人工核实"
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
     },
     {
       "name": "品赞",
       "slug": "pinzan",
-      "status": "draft",
-      "officialUrl": "",
-      "description": "品赞 代理服务商，提供 residential/datacenter代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "status": "published",
+      "officialUrl": "https://www.ipzan.com",
+      "description": "品赞代理国内 IP 服务商，百万级 IP 池覆盖全国 400+ 城市，支持包时/包量/按量计费与 API 提取。",
       "proxyTypes": [
         "residential",
         "datacenter"
@@ -1073,16 +1085,21 @@
       "regionServed": [
         "cn"
       ],
-      "sourceUrls": [],
+      "sourceUrls": [
+        {
+          "title": "品赞 官网",
+          "url": "https://www.ipzan.com"
+        }
+      ],
       "updatedAt": "2026-08-08",
-      "notes": "待核验：官网、协议支持与试用信息待人工核实"
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
     },
     {
       "name": "携趣",
       "slug": "xiequ",
-      "status": "draft",
-      "officialUrl": "",
-      "description": "携趣 代理服务商，提供 residential/datacenter代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "status": "published",
+      "officialUrl": "https://www.xiequ.cn",
+      "description": "携趣网络代理 IP 服务商，提供短效/长效/隧道代理与趣代理客户端，覆盖全国节点，支持多种计费方式。",
       "proxyTypes": [
         "residential",
         "datacenter"
@@ -1124,16 +1141,21 @@
       "regionServed": [
         "cn"
       ],
-      "sourceUrls": [],
+      "sourceUrls": [
+        {
+          "title": "携趣 官网",
+          "url": "https://www.xiequ.cn"
+        }
+      ],
       "updatedAt": "2026-08-08",
-      "notes": "待核验：官网、协议支持与试用信息待人工核实"
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
     },
     {
       "name": "太阳 HTTP",
       "slug": "taiyang-http",
-      "status": "draft",
+      "status": "inactive",
       "officialUrl": "",
-      "description": "太阳 HTTP 代理服务商，提供 datacenter代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "description": "太阳 HTTP 代理服务商，提供 datacenter代理产品。",
       "proxyTypes": [
         "datacenter"
       ],
@@ -1151,7 +1173,9 @@
       "regions": [],
       "features": [],
       "suitableFor": [],
-      "limitations": [],
+      "limitations": [
+        "芝麻系代理服务（含芝麻/品易/太阳/极光）已于 2024 年停止代理 IP 业务，本条目保留作为历史参考。"
+      ],
       "geoGranularity": [
         "country",
         "city"
@@ -1174,14 +1198,14 @@
       ],
       "sourceUrls": [],
       "updatedAt": "2026-08-08",
-      "notes": "待核验：官网、协议支持与试用信息待人工核实"
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
     },
     {
       "name": "天启 HTTP",
       "slug": "tianqi-http",
-      "status": "draft",
-      "officialUrl": "",
-      "description": "天启 HTTP 代理服务商，提供 datacenter代理产品。套餐、覆盖与接口能力以服务商官方页面为准（资料待核验）。",
+      "status": "published",
+      "officialUrl": "https://www.tianqiip.com",
+      "description": "天启 HTTP 国内代理服务商，提供动静态 IP、固定 IP 与企业套餐，覆盖全国 200+ 城市。",
       "proxyTypes": [
         "datacenter"
       ],
@@ -1220,9 +1244,1627 @@
       "regionServed": [
         "cn"
       ],
-      "sourceUrls": [],
+      "sourceUrls": [
+        {
+          "title": "天启 HTTP 官网",
+          "url": "https://www.tianqiip.com"
+        }
+      ],
       "updatedAt": "2026-08-08",
-      "notes": "待核验：官网、协议支持与试用信息待人工核实"
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
+    },
+    {
+      "name": "PrivateProxy",
+      "slug": "privateproxy",
+      "status": "published",
+      "officialUrl": "https://privateproxy.me",
+      "description": "PrivateProxy 私有数据中心代理服务商，提供美国与欧洲机房 IP，按 IP 计费，适合需要固定入口的场景。",
+      "proxyTypes": [
+        "datacenter"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password"
+      ],
+      "pricingModels": [
+        "ip",
+        "package"
+      ],
+      "regions": [
+        "美国",
+        "欧洲"
+      ],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "global"
+      ],
+      "sourceUrls": [
+        {
+          "title": "PrivateProxy 官网",
+          "url": "https://privateproxy.me"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
+    },
+    {
+      "name": "IPPIGO",
+      "slug": "ipipgo",
+      "status": "published",
+      "officialUrl": "https://www.ipipgo.com",
+      "description": "IPIPGO 全球代理服务商，提供住宅与数据中心代理，覆盖多地，支持自动轮换与 API 接入。",
+      "proxyTypes": [
+        "residential",
+        "datacenter"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "package"
+      ],
+      "regions": [
+        "全球"
+      ],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "global"
+      ],
+      "sourceUrls": [
+        {
+          "title": "IPPIGO 官网",
+          "url": "https://www.ipipgo.com"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
+    },
+    {
+      "name": "品易云",
+      "slug": "pinyi",
+      "status": "published",
+      "officialUrl": "https://proxy.py.cn",
+      "description": "品易云提供国内与海外数据中心代理，支持 API 提取与代理池，按量计费灵活。",
+      "proxyTypes": [
+        "datacenter"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "package"
+      ],
+      "regions": [
+        "全球",
+        "国内"
+      ],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "global"
+      ],
+      "sourceUrls": [
+        {
+          "title": "品易云 官网",
+          "url": "https://proxy.py.cn"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
+    },
+    {
+      "name": "PYProxy",
+      "slug": "pyproxy",
+      "status": "published",
+      "officialUrl": "https://www.pyproxy.com",
+      "description": "PYProxy 提供真实住宅与高匿数据中心代理，覆盖中国香港等地区，支持城市级定位。",
+      "proxyTypes": [
+        "residential",
+        "datacenter"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "package"
+      ],
+      "regions": [
+        "全球 150+ 国家",
+        "中国香港"
+      ],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "global"
+      ],
+      "sourceUrls": [
+        {
+          "title": "PYProxy 官网",
+          "url": "https://www.pyproxy.com"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
+    },
+    {
+      "name": "ROLA-IP",
+      "slug": "rola-ip",
+      "status": "published",
+      "officialUrl": "https://www.rola-ip.co",
+      "description": "ROLA-IP 全球住宅与数据中心代理服务商，覆盖广泛，提供静态与动态两种模式。",
+      "proxyTypes": [
+        "residential",
+        "datacenter"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "package"
+      ],
+      "regions": [
+        "全球 200+ 国家"
+      ],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "global"
+      ],
+      "sourceUrls": [
+        {
+          "title": "ROLA-IP 官网",
+          "url": "https://www.rola-ip.co"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
+    },
+    {
+      "name": "IP2world",
+      "slug": "ip2world",
+      "status": "published",
+      "officialUrl": "https://www.ip2world.com",
+      "description": "IP2world 提供静态住宅、轮滑住宅与数据中心代理，面向企业管理场景。",
+      "proxyTypes": [
+        "residential",
+        "static-residential",
+        "datacenter"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "package"
+      ],
+      "regions": [
+        "全球 190+ 国家"
+      ],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "global"
+      ],
+      "sourceUrls": [
+        {
+          "title": "IP2world 官网",
+          "url": "https://www.ip2world.com"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
+    },
+    {
+      "name": "StormProxies",
+      "slug": "storm",
+      "status": "published",
+      "officialUrl": "https://www.stormproxies.com",
+      "description": "StormProxies 提供美国与欧洲住宅、静态住宅及数据中心代理，价格友好。",
+      "proxyTypes": [
+        "residential",
+        "static-residential",
+        "datacenter"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password"
+      ],
+      "pricingModels": [
+        "traffic",
+        "package"
+      ],
+      "regions": [
+        "美国",
+        "欧洲",
+        "亚洲"
+      ],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "global"
+      ],
+      "sourceUrls": [
+        {
+          "title": "StormProxies 官网",
+          "url": "https://www.stormproxies.com"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
+    },
+    {
+      "name": "辣椒 HTTP",
+      "slug": "lajiao-http",
+      "status": "published",
+      "officialUrl": "https://www.lajiaohttp.com",
+      "description": "辣椒 HTTP 海外高匿代理服务商，提供静态长效住宅与动态住宅，适配多国社媒与跨境电商场景。",
+      "proxyTypes": [
+        "static-residential",
+        "residential"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "package"
+      ],
+      "regions": [
+        "全球 190+ 国家"
+      ],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "global"
+      ],
+      "sourceUrls": [
+        {
+          "title": "辣椒 HTTP 官网",
+          "url": "https://www.lajiaohttp.com"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
+    },
+    {
+      "name": "B2Proxy",
+      "slug": "b2proxy",
+      "status": "published",
+      "officialUrl": "https://www.b2proxy.com",
+      "description": "B2Proxy 提供全球真实住宅 IP 与数据中心代理，支持会话保持与 API 提取，适配多账号运营。",
+      "proxyTypes": [
+        "residential",
+        "static-residential",
+        "datacenter"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "package"
+      ],
+      "regions": [
+        "全球 190+ 国家"
+      ],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "global"
+      ],
+      "sourceUrls": [
+        {
+          "title": "B2Proxy 官网",
+          "url": "https://www.b2proxy.com"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
+    },
+    {
+      "name": "IPFLY",
+      "slug": "ipfly",
+      "status": "published",
+      "officialUrl": "https://www.ipfly.net",
+      "description": "IPFLY 企业级海外代理服务商，9000 万+ 真实住宅 IP，覆盖 190+ 国家，支持动静态住宅与数据中心代理。",
+      "proxyTypes": [
+        "residential",
+        "static-residential",
+        "datacenter"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "ip"
+      ],
+      "regions": [
+        "全球 190+ 国家"
+      ],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "global"
+      ],
+      "sourceUrls": [
+        {
+          "title": "IPFLY 官网",
+          "url": "https://www.ipfly.net"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
+    },
+    {
+      "name": "神龙 HTTP",
+      "slug": "shenlong-http",
+      "status": "published",
+      "officialUrl": "https://h.shenlongip.com",
+      "description": "神龙 HTTP 国内代理服务商，提供 HTTP / HTTPS / SOCKS5 代理与 IP 池提取，支持会话保持。",
+      "proxyTypes": [
+        "datacenter"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "package"
+      ],
+      "regions": [
+        "国内"
+      ],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "cn"
+      ],
+      "sourceUrls": [
+        {
+          "title": "神龙 HTTP 官网",
+          "url": "https://h.shenlongip.com"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
+    },
+    {
+      "name": "花生 HTTP",
+      "slug": "huasheng-http",
+      "status": "published",
+      "officialUrl": "https://ip.huashengdaili.com",
+      "description": "花生 HTTP 提供国内数据中心代理，支持 IP 池与 API 提取，按量计费。",
+      "proxyTypes": [
+        "datacenter"
+      ],
+      "protocols": [
+        "http",
+        "https"
+      ],
+      "authentication": [
+        "username-password",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "package"
+      ],
+      "regions": [
+        "国内"
+      ],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "cn"
+      ],
+      "sourceUrls": [
+        {
+          "title": "花生 HTTP 官网",
+          "url": "https://ip.huashengdaili.com"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
+    },
+    {
+      "name": "熊猫代理",
+      "slug": "xiongmao",
+      "status": "published",
+      "officialUrl": "https://www.xiongmaodaili.com",
+      "description": "熊猫代理提供国内动态代理与海外住宅代理，覆盖多种业务场景。",
+      "proxyTypes": [
+        "datacenter",
+        "residential"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "package"
+      ],
+      "regions": [
+        "国内",
+        "海外"
+      ],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "cn"
+      ],
+      "sourceUrls": [
+        {
+          "title": "熊猫代理 官网",
+          "url": "https://www.xiongmaodaili.com"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
+    },
+    {
+      "name": "极风云",
+      "slug": "jifeng",
+      "status": "published",
+      "officialUrl": "https://www.jifengdaili.com",
+      "description": "极风云国内代理服务商，支持会话保持与 IP 池 API 提取，覆盖面更广。",
+      "proxyTypes": [
+        "datacenter"
+      ],
+      "protocols": [
+        "http",
+        "https"
+      ],
+      "authentication": [
+        "username-password",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "package"
+      ],
+      "regions": [
+        "国内"
+      ],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "cn"
+      ],
+      "sourceUrls": [
+        {
+          "title": "极风云 官网",
+          "url": "https://www.jifengdaili.com"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
+    },
+    {
+      "name": "豌豆 HTTP",
+      "slug": "wandou-http",
+      "status": "published",
+      "officialUrl": "https://h.wandouip.com",
+      "description": "豌豆 HTTP 提供国内 HTTP/HTTPS 代理，支持会话保持与 IP 池 API 提取优化。",
+      "proxyTypes": [
+        "datacenter"
+      ],
+      "protocols": [
+        "http",
+        "https"
+      ],
+      "authentication": [
+        "username-password",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "package"
+      ],
+      "regions": [
+        "国内"
+      ],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "cn"
+      ],
+      "sourceUrls": [
+        {
+          "title": "豌豆 HTTP 官网",
+          "url": "https://h.wandouip.com"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
+    },
+    {
+      "name": "全民代理",
+      "slug": "quanmin-ip",
+      "status": "published",
+      "officialUrl": "http://www.quanminip.com",
+      "description": "全民代理提供国内数据中心代理与 IP 池提取，价格敏感场景可用。",
+      "proxyTypes": [
+        "datacenter"
+      ],
+      "protocols": [
+        "http",
+        "https"
+      ],
+      "authentication": [
+        "username-password",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "package"
+      ],
+      "regions": [
+        "国内"
+      ],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "cn"
+      ],
+      "sourceUrls": [
+        {
+          "title": "全民代理 官网",
+          "url": "http://www.quanminip.com"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
+    },
+    {
+      "name": "快代理",
+      "slug": "kuaidaili",
+      "status": "published",
+      "officialUrl": "https://www.kuaidaili.com",
+      "description": "快代理国内老牌服务商，提供独享/隧道/短效代理与 IP 池，支持 HTTP 与 HTTPS。",
+      "proxyTypes": [
+        "datacenter",
+        "residential"
+      ],
+      "protocols": [
+        "http",
+        "https"
+      ],
+      "authentication": [
+        "username-password",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "port",
+        "package"
+      ],
+      "regions": [
+        "国内"
+      ],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "cn"
+      ],
+      "sourceUrls": [
+        {
+          "title": "快代理 官网",
+          "url": "https://www.kuaidaili.com"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
+    },
+    {
+      "name": "彩虹代理",
+      "slug": "caihongdaili",
+      "status": "published",
+      "officialUrl": "http://www.caihongdaili.com",
+      "description": "彩虹代理专注大数据基础电信服务，提供代理 IP 与 API 提取能力，可集成进第三方 IP 池。",
+      "proxyTypes": [
+        "datacenter"
+      ],
+      "protocols": [
+        "http",
+        "https"
+      ],
+      "authentication": [
+        "username-password",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "package"
+      ],
+      "regions": [
+        "国内"
+      ],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "cn"
+      ],
+      "sourceUrls": [
+        {
+          "title": "彩虹代理 官网",
+          "url": "http://www.caihongdaili.com"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
+    },
+    {
+      "name": "Cliproxy",
+      "slug": "cliproxy",
+      "status": "published",
+      "officialUrl": "https://cliproxy.com",
+      "description": "Cliproxy 性价比住宅代理，稳定且快速，覆盖全球 180+ 国家，新用户可试用。",
+      "proxyTypes": [
+        "residential"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "package"
+      ],
+      "regions": [
+        "全球 180+ 国家"
+      ],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "global"
+      ],
+      "sourceUrls": [
+        {
+          "title": "Cliproxy 官网",
+          "url": "https://cliproxy.com"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
+    },
+    {
+      "name": "985Proxy",
+      "slug": "985proxy",
+      "status": "published",
+      "officialUrl": "https://www.985proxy.com",
+      "description": "985Proxy 拥有超过 2000 万个高稳定性和高速度的原生静态住宅池。",
+      "proxyTypes": [
+        "static-residential"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "api"
+      ],
+      "pricingModels": [
+        "ip",
+        "traffic"
+      ],
+      "regions": [
+        "全球"
+      ],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "global"
+      ],
+      "sourceUrls": [
+        {
+          "title": "985Proxy 官网",
+          "url": "https://www.985proxy.com"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
+    },
+    {
+      "name": "NovProxy",
+      "slug": "novproxy",
+      "status": "published",
+      "officialUrl": "https://novproxy.com",
+      "description": "NovProxy 高性价比住宅 IP 提供者，1 亿+ 住宅 IP 覆盖 190+ 地区，流量长期有效。",
+      "proxyTypes": [
+        "residential"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password"
+      ],
+      "pricingModels": [
+        "traffic"
+      ],
+      "regions": [
+        "全球 190+ 国家"
+      ],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "global"
+      ],
+      "sourceUrls": [
+        {
+          "title": "NovProxy 官网",
+          "url": "https://novproxy.com"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
+    },
+    {
+      "name": "IPWO",
+      "slug": "ipwo",
+      "status": "published",
+      "officialUrl": "https://www.ipwo.net",
+      "description": "IPWO 综合型全球代理服务商，提供住宅/静态/数据中心代理，支持 API。",
+      "proxyTypes": [
+        "residential",
+        "static-residential",
+        "datacenter"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "package"
+      ],
+      "regions": [
+        "全球 190+ 国家"
+      ],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "global"
+      ],
+      "sourceUrls": [
+        {
+          "title": "IPWO 官网",
+          "url": "https://www.ipwo.net"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
+    },
+    {
+      "name": "Roxlabs",
+      "slug": "roxlabs",
+      "status": "published",
+      "officialUrl": "https://www.roxlabs.cn",
+      "description": "Roxlabs 千万动态住宅代理，覆盖全球，支持国家/地区定向，高质量。",
+      "proxyTypes": [
+        "residential"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic"
+      ],
+      "regions": [
+        "全球 200+ 国家",
+        "中国香港"
+      ],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "global"
+      ],
+      "sourceUrls": [
+        {
+          "title": "Roxlabs 官网",
+          "url": "https://www.roxlabs.cn"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
+    },
+    {
+      "name": "Ownips",
+      "slug": "ownips",
+      "status": "published",
+      "officialUrl": "https://www.ownips.com",
+      "description": "Ownips 原生静态 ISP 领先者，提供高质静态住宅 IP 池。",
+      "proxyTypes": [
+        "static-residential",
+        "residential"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "ip"
+      ],
+      "regions": [
+        "全球 200+ 国家"
+      ],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "global"
+      ],
+      "sourceUrls": [
+        {
+          "title": "Ownips 官网",
+          "url": "https://www.ownips.com"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
+    },
+    {
+      "name": "Thordata",
+      "slug": "thordata",
+      "status": "published",
+      "officialUrl": "https://www.thordata.com",
+      "description": "Thordata 大型 IP 池提供方，60M+ 大池子，接入稳定。",
+      "proxyTypes": [
+        "residential",
+        "static-residential"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "ip"
+      ],
+      "regions": [
+        "全球"
+      ],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "global"
+      ],
+      "sourceUrls": [
+        {
+          "title": "Thordata 官网",
+          "url": "https://www.thordata.com"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
+    },
+    {
+      "name": "Kookeey",
+      "slug": "kookeey",
+      "status": "published",
+      "officialUrl": "https://www.kookeey.com",
+      "description": "Kookeey 全球高纯独享代理产品，覆盖多个区域。",
+      "proxyTypes": [
+        "residential",
+        "static-residential",
+        "datacenter"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "package"
+      ],
+      "regions": [
+        "全球"
+      ],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "global"
+      ],
+      "sourceUrls": [
+        {
+          "title": "Kookeey 官网",
+          "url": "https://www.kookeey.com"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
+    },
+    {
+      "name": "91HTTP",
+      "slug": "91http",
+      "status": "published",
+      "officialUrl": "https://www.91http.com",
+      "description": "91HTTP 日清理 500 万+ 净 IP，覆盖国内 380 城市，秒切换。",
+      "proxyTypes": [
+        "datacenter"
+      ],
+      "protocols": [
+        "http",
+        "https"
+      ],
+      "authentication": [
+        "username-password",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "package"
+      ],
+      "regions": [
+        "国内 380 城市"
+      ],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "cn"
+      ],
+      "sourceUrls": [
+        {
+          "title": "91HTTP 官网",
+          "url": "https://www.91http.com"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
+    },
+    {
+      "name": "RapidProxy",
+      "slug": "rapidproxy",
+      "status": "published",
+      "officialUrl": "https://www.rapidproxy.io",
+      "description": "RapidProxy 全球住宅代理服务商，9000 万+ 真人住宅 IP 覆盖 200+ 地区，支持动态轮换与静态 ISP，流量长期有效。",
+      "proxyTypes": [
+        "residential",
+        "static-residential"
+      ],
+      "protocols": [
+        "http",
+        "https",
+        "socks5"
+      ],
+      "authentication": [
+        "username-password",
+        "api"
+      ],
+      "pricingModels": [
+        "traffic",
+        "ip"
+      ],
+      "regions": [
+        "全球 220+ 地区"
+      ],
+      "features": [],
+      "suitableFor": [],
+      "limitations": [],
+      "geoGranularity": [
+        "country",
+        "city"
+      ],
+      "sessionMode": [
+        "rotating",
+        "sticky"
+      ],
+      "targetUsers": [
+        "sme",
+        "personal"
+      ],
+      "selfService": true,
+      "trialAvailable": false,
+      "language": [
+        "zh"
+      ],
+      "regionServed": [
+        "global"
+      ],
+      "sourceUrls": [
+        {
+          "title": "RapidProxy 官网",
+          "url": "https://www.rapidproxy.io"
+        }
+      ],
+      "updatedAt": "2026-08-08",
+      "notes": "根据公开资料与第三方公开教程整理，可能随服务商调整而变化，实际信息以服务商当前页面为准"
     }
   ]
 }

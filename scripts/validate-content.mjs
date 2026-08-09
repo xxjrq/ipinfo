@@ -128,7 +128,9 @@ function validateFile(file) {
 
 	// 4. 供应商文章完整性（index.md 为栏目页，不适用）
 	if ((pageType === 'providers' || section === 'providers') && basename(file) !== 'index.md') {
-		const required = ['provider', 'slug', 'status', 'officialUrl', 'proxyTypes', 'authentication', 'disclosure'];
+		// 注：frontmatter 不得再声明 slug —— Astro 将 slug 视为内容集合保留键，会覆盖文件路径路由；
+	// 页面与数据文件的一致性改由 provider 名称匹配判定（见下方第 10 条）
+	const required = ['provider', 'status', 'officialUrl', 'proxyTypes', 'authentication', 'disclosure'];
 		for (const field of required) {
 			if (!data[field]) errors.push(`${rel(file)}: 供应商文章缺少 ${field}`);
 		}
@@ -155,26 +157,16 @@ function validateFile(file) {
 		}
 	}
 
-	// 10. 供应商文章与 providers.json 一致性（frontmatter 的 slug/provider/status 必须与数据文件对应条目一致）
+	// 10. 供应商文章与 providers.json 一致性（页面用 provider 名称匹配数据文件；slug 由文件名推导，frontmatter 不再声明）
 	if ((pageType === 'providers' || section === 'providers') && basename(file) !== 'index.md') {
 		const providers = loadProviders();
-		let entry = data.slug
-			? providers.find((p) => p.slug === data.slug)
-			: data.provider
-				? providers.find((p) => p.name === data.provider)
-				: undefined;
+		let entry = data.provider
+			? providers.find((p) => p.name === data.provider)
+			: undefined;
 
-		if (data.slug && !entry) {
-			errors.push(`${rel(file)}: providers.json 中不存在 slug「${data.slug}」`);
-		} else if (!data.slug && data.provider && !entry) {
-			if (!isDraftFile) {
-				errors.push(`${rel(file)}: provider「${data.provider}」在 providers.json 中无对应条目`);
-			} else {
-				warnings.push(`${rel(file)}: provider「${data.provider}」在 providers.json 中无对应条目（草稿，请核对名称或补充 slug）`);
-			}
-		}
-
-		if (entry) {
+		if (!entry) {
+			errors.push(`${rel(file)}: provider「${data.provider || '(空)'}」在 providers.json 中无对应条目`);
+		} else {
 			// status 与数据文件不一致 → 报错（数据层是唯一事实源）
 			if (data.status && entry.status && data.status !== entry.status) {
 				errors.push(`${rel(file)}: status「${data.status}」与 providers.json 中「${entry.slug}」的「${entry.status}」不一致`);

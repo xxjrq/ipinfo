@@ -1,6 +1,10 @@
 # OPENSOURCE-PLAN — 开源改造：文件清单、数据 Schema、内容迁移
 
-> 状态：待确认（2026-08-08）
+> **归档说明（2026-08-08）**：本文件为改造前的规划稿，已实施完成，保留仅作历史记录。
+> 文中出现的旧 Schema 字段（`verified` / `lastVerified` / `officialDocs` / `providerUrl` / `pricingUrl` / `supportedProxyTypes`）均已废弃移除，
+> 现行状态机为 `draft / published / outdated / inactive`，服务商数据唯一事实源为 `src/data/providers.json`，
+> 校验规则以 `scripts/validate-content.mjs`、`scripts/check-dist.mjs` 为准。请勿按本文旧字段修改代码或数据。
+> 状态：已实施（2026-08-08）
 > 依据：`CONTENT-DIRECTION.md` v2 拍板决策 + 开源形态要求（仓库可 Fork、数据可复用、内容可协作、EasyBR 可关闭）。
 > 目标交付：**网页能访问、仓库能 Fork、数据能复用、内容能协作维护、EasyBR 推广可关闭**。
 

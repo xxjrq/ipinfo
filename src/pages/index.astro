@@ -162,10 +162,11 @@ const scenarios = ['跨境电商', '社媒账号', '广告验证', '数据采集
 			</p>
 		</section>
 
-		<!-- EasyBR 配套工具（中下部；sponsor.enabled=false 时整块不渲染） -->
+		<!-- EasyBR 配套工具（中下部；sponsor.enabled=false 时整块不渲染）
+		     data-sponsor 为推广模块稳定标记：check-sponsor-off.mjs 校验启用时存在、关闭后消失 -->
 		{
 			sponsor.enabled && (
-				<section class="ip-cta">
+				<section class="ip-cta" data-sponsor="cta">
 					<h2>{sponsor.name}：指纹浏览器与代理环境管理工具</h2>
 					<p>{sponsor.description}。选好代理后，可用 {sponsor.name} 为不同账号创建独立浏览器环境。</p>
 					<ul class="ip-features">
@@ -174,7 +175,7 @@ const scenarios = ['跨境电商', '社媒账号', '广告验证', '数据采集
 						<li>Windows / macOS</li>
 						<li>代理与环境独立绑定</li>
 					</ul>
-					<a class="ip-btn-primary" href={sponsor.downloadUrl + '?utm_source=ipinfo&utm_medium=cta&utm_campaign=download'} rel="noopener">免费下载 {sponsor.name}</a>
+					<a class="ip-btn-primary" href={sponsor.downloadUrl + '?utm_source=ipinfo&utm_medium=cta&utm_campaign=download'} rel="noopener" data-sponsor="download">免费下载 {sponsor.name}</a>
 					<p class="ip-note">服务商目录更新时间：{updatedAt}。套餐与接口以服务商官方页面为准。</p>
 				</section>
 			)

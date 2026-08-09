@@ -1,6 +1,10 @@
 # EasyBR IP 资源中心 — 内容方向调整方案
 
-> 状态：v2（已按人工拍板更新，2026-08-08）
+> **归档说明（2026-08-08）**：本文件为内容方向拍板记录，相关调整已落地，保留仅作历史参考。
+> 文中涉及的旧 Schema 字段（`verified` / `lastVerified` / `officialDocs` / `pricingUrl` 等）均已废弃移除，
+> 现行服务商状态机为 `draft / published / outdated / inactive`，数据唯一事实源 `src/data/providers.json`，
+> 校验规则以 `scripts/validate-content.mjs`、`scripts/check-dist.mjs` 为准。请勿按文内旧字段操作。
+> 状态：v2（已按人工拍板更新，2026-08-08）— 已实施
 > 背景：P0 技术治理已通过并上线。本轮纠正内容定位——站点是**代理 IP 资源导航与选型平台**，EasyBR 是配套工具，不是文档主体。
 > 配套清单：开源改造文件清单、数据 Schema、内容迁移清单见 `OPENSOURCE-PLAN.md`。
 
