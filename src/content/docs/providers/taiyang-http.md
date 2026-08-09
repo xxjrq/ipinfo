@@ -20,7 +20,9 @@ summary: 太阳 HTTP 提供 datacenter代理，主要面向sme、personal，覆�
 takeaway: 太阳 HTTP 是否适合你的场景，需结合覆盖区域、认证方式与计费模式综合判断；具体以下单页面为准。
 author: EasyBR 团队
 updatedAt: 2026-08-08
-disclosure: 本服务商已停止（或停止提供）代理 IP 服务，本页保留作为历史参考；请以其他在营服务商为准。
+disclosure: 本服务商已停止（或停止提供）代理 IP 服务，本页保留作为历史记录；请以其他在营服务商为准。
+sidebar:
+  hidden: true
 
 ---
 
