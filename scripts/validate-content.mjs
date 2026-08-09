@@ -157,23 +157,19 @@ function validateFile(file) {
 		}
 	}
 
-	// 10. 供应商文章与 providers.json 一致性（页面用 provider 名称匹配数据文件；slug 由文件名推导，frontmatter 不再声明）
+	// 10. 供应商文章与 providers.json 一致性（页面用文件名推导 slug 匹配数据文件，不依赖展示名称）
 	if ((pageType === 'providers' || section === 'providers') && basename(file) !== 'index.md') {
 		const providers = loadProviders();
-		let entry = data.provider
-			? providers.find((p) => p.name === data.provider)
-			: undefined;
+		// 文件名 <slug>.md → slug；不依赖 frontmatter 的 provider 展示名称（名称会变，如 Smartproxy → Decodo）
+		const fileSlug = basename(file).replace(/\.md$/, '');
+		const entry = providers.find((p) => p.slug === fileSlug);
 
 		if (!entry) {
-			errors.push(`${rel(file)}: provider「${data.provider || '(空)'}」在 providers.json 中无对应条目`);
+			errors.push(`${rel(file)}: 文件 ${basename(file)} 推导的 slug「${fileSlug}」在 providers.json 中无对应条目`);
 		} else {
 			// status 与数据文件不一致 → 报错（数据层是唯一事实源）
 			if (data.status && entry.status && data.status !== entry.status) {
 				errors.push(`${rel(file)}: status「${data.status}」与 providers.json 中「${entry.slug}」的「${entry.status}」不一致`);
-			}
-			// provider 名称与数据文件不一致 → 报错
-			if (data.provider && data.provider !== entry.name) {
-				errors.push(`${rel(file)}: provider「${data.provider}」与 providers.json 中 slug「${entry.slug}」的名称「${entry.name}」不一致`);
 			}
 			// 文章声明 published 但数据文件不是 published → 报错
 			if (data.status === 'published' && entry.status !== 'published') {
@@ -285,6 +281,15 @@ try {
 			}
 			if (!p.officialUrl || !/^https?:\/\//.test(p.officialUrl)) {
 				errors.push(`providers.json: 「${p.slug}」status=published 必须填写合法 officialUrl`);
+			}
+			if (!Array.isArray(p.suitableFor) || p.suitableFor.length < 2) {
+				errors.push(`providers.json: 「${p.slug}」status=published 必须填写 suitableFor（≥2 条适用场景）`);
+			}
+			if (!Array.isArray(p.limitations) || p.limitations.length < 1) {
+				errors.push(`providers.json: 「${p.slug}」status=published 必须填写 limitations（≥1 条）`);
+			}
+			if (!Array.isArray(p.features) || p.features.length < 1) {
+				errors.push(`providers.json: 「${p.slug}」status=published 必须填写 features（≥1 条特点）`);
 			}
 		}
 		// 旧字段零出现

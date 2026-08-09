@@ -31,6 +31,7 @@ const PUBLIC_FIELDS = [
 	'features',
 	'suitableFor',
 	'limitations',
+	'related',
 	'sourceUrls',
 	'updatedAt',
 	'status',
