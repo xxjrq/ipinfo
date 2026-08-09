@@ -82,10 +82,12 @@ for (const p of targets) {
 	const limits = p.limitations || [];
 	const features = p.features || [];
 	const isCn = (p.regionServed || []).includes('cn');
-	const disabled =
+const disabled =
 		p.status === 'inactive'
 			? '本服务商已停止（或停止提供）代理 IP 服务，本页保留作为历史记录；请以其他在营服务商为准。'
 			: '资料整理自服务商官方公开页面，可能随服务商调整而变化，实际能力以官方当前页面为准。';
+	// inactive 停运历史页：移出侧边栏导航（仅保留直链访问），避免误导为在营服务商
+	const sidebarHidden = p.status === 'inactive' ? 'sidebar:\n  hidden: true\n' : '';
 
 	const related = relatedSlugs(p, providers.map((x) => x.slug));
 
@@ -126,7 +128,7 @@ takeaway: ${p.name} 是否适合你的场景，需结合覆盖区域、认证方
 author: EasyBR 团队
 updatedAt: ${p.updatedAt || '2026-08-08'}
 disclosure: ${disabled}
-${sourcesBlock(p.sourceUrls)}
+${sidebarHidden}${sourcesBlock(p.sourceUrls)}
 ---
 
 > ${disabled}

@@ -21,6 +21,8 @@ takeaway: 太阳 HTTP 是否适合你的场景，需结合覆盖区域、认证�
 author: EasyBR 团队
 updatedAt: 2026-08-08
 disclosure: 本服务商已停止（或停止提供）代理 IP 服务，本页保留作为历史记录；请以其他在营服务商为准。
+sidebar:
+  hidden: true
 
 ---
 
